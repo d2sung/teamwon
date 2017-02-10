@@ -1,4 +1,3 @@
-repo
-====
+CSE 170 Mindfulness Project - Team Won
 
-Project Description
+Collin Wasley, Daniel Sung, Cameron Panlasigui
