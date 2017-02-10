@@ -22,3 +22,7 @@ exports.calorie = function(req, res) {
 exports.meal = function(req, res) {
   res.render('meal');
 };
+
+exports.items = function(req, res) {
+  res.render('bananas');
+}

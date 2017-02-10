@@ -41,6 +41,7 @@ app.get('/grocery', index.grocery);
 app.get('/calorietracking', index.calorie);
 app.get('/mealplanning', index.meal);
 app.get('/inventory', index.inv);
+app.get('/items/bananas', index.items);
 // Example route
 // app.get('/users', user.list);
 

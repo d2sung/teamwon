@@ -4,8 +4,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"
 		charset="utf-8">
 
-	<link href="css/bootstrap.css" rel="stylesheet">
-	<link href="css/bootstrap-theme.css" rel="stylesheet">
+	<link href="../css/bootstrap.css" rel="stylesheet">
+	<link href="../css/bootstrap-theme.css" rel="stylesheet">
+	<link href="../css/allpages.css" rel="stylesheet">
 
 </head>
 <body>
@@ -15,7 +16,36 @@
 		<!-- Headers -->
 		<h5><a href="/">Go Home</a></h5>
 
-		<h3> Inventory List goes here </h3>
+		<ul>
+			<li><a href="items/bananas"> Bananas </a>
+				<form id='incdec' method='POST' action='#'>
+    			<input type='button' value='-' class='minus' field='quantity' />
+    			<input type='text' name='quantity' value='0' class='qty' />
+    			<input type='button' value='+' class='plus' field='quantity' />
+				</form>
+			</li></br>
+			<li> Milk
+				<form id='incdec' method='POST' action='#'>
+					<input type='button' value='-' class='minus' field='quantity' />
+					<input type='text' name='quantity' value='0' class='qty' />
+					<input type='button' value='+' class='plus' field='quantity' />
+				</form>
+			</li></br>
+			<li> Eggs
+				<form id='incdec' method='POST' action='#'>
+					<input type='button' value='-' class='minus' field='quantity' />
+					<input type='text' name='quantity' value='0' class='qty' />
+					<input type='button' value='+' class='plus' field='quantity' />
+				</form>
+			</li>
+		</ul></br>
+
+		<div id="footer">
+			<p><a href="../grocery"> Grocery List </a>
+				<a href="../inventory"> Inventory </a>
+				<a href="../mealplanning"> Meal Planning </a>
+				<a href="../calorietracking"> Calorie Tracker </a></p>
+		</div>
 	</div>
 
 	<script src="js/bootstrap.js"></script>
