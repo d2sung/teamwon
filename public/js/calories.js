@@ -18,8 +18,8 @@ function getEatenList(result) {
   $.each( result['eaten'], function (index, value) {
     sumCalories = sumCalories + (value.quantity * value.calories);
     var htmlToInject = '<div id="' + index + '"> <label>' +
-    '<p name="item" value="">' + 'Name: ' + value.name +
-    ' Quantity: ' + value.quantity +
+    '<p name="item" value="">' + value.name +
+    ' - Quantity: ' + value.quantity +
     ' <br> ' +
     ' Calories Each: ' + value.calories +
     ' Calories: ' + (value.quantity * value.calories) +
