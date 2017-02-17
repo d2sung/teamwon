@@ -1,0 +1,33 @@
+{
+	"recipes": [
+		{
+			"name": "Easy Mac",
+			"description": "Excellent and delicious pasta made from the chefs at Kraft",
+			"rating": "5",
+			"easiness": "1",
+			"ingredients": {
+				"name": [
+					"milk",
+					"water",
+					"butter",
+					"box of kraft mac and cheese"
+				],
+				"quantity": [
+					"1 cup",
+					"4 cups",
+					"4 tbsp",
+					"1 box"
+				]
+			},
+			"instructions": {
+				"step": [
+					"Bring water to a boil in a medium pot",
+					"Put kraft macaroni in for 10 minutes or until tender",
+					"Drain macaroni but do not rinse, return to pot",
+					"Add butter, milk and cheese",
+					"Enjoy"
+				]
+			}
+		}
+	]
+}
