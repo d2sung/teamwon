@@ -10,8 +10,8 @@ var handlebars = require('express3-handlebars')
 
 var index = require('./routes/index');
 var login = require('./routes/login');
-var grocery = require('./routes/groceryList');
-var ingredients = require('./routes/ingredientsList');
+var grocery = require('./routes/grocery');
+var ingredients = require('./routes/ingredients');
 // var grocery = require('./routes/grocery');
 // Example route
 // var user = require('./routes/user');
