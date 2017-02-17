@@ -26,3 +26,7 @@ exports.meal = function(req, res) {
 exports.items = function(req, res) {
   res.render('bananas');
 }
+
+exports.items = function(req, res) {
+	res.render('login');
+}
