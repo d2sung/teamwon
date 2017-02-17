@@ -28,6 +28,35 @@
 					"Add butter, milk and cheese",
 					"Enjoy"
 				]
+			},
+
+			"name": "Whopper",
+			"description": "Have it your way...foreal",
+			"imageURL": "http://www.seriouseats.com/images/2015/07/20150728-homemade-whopper-food-lab-00.jpg",
+			"rating": "4",
+			"easiness": "2",
+			"ingredients": {
+				"name": [
+					"Buns",
+					"patty",
+					"lettuce",
+					"tomato"
+				],
+				"quantity": [
+					"2",
+					"1-2",
+					"2",
+					"1 slice"
+				]
+			},
+			"instructions": {
+				"step": [
+					"Bring water to a boil in a medium pot",
+					"Put kraft macaroni in for 10 minutes or until tender",
+					"Drain macaroni but do not rinse, return to pot",
+					"Add butter, milk and cheese",
+					"Enjoy"
+				]
 			}
 		}
 	]
