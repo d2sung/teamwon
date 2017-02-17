@@ -1,0 +1,16 @@
+{
+  "eaten": [
+    {
+      "name": "Robs",
+      "quantity": "5",
+      "units": "unit",
+      "calories": "1750"
+    },
+    {
+      "name": "Windy",
+      "quantity": "50",
+      "units": "unit",
+      "calories": "45"
+    }
+  ]
+}

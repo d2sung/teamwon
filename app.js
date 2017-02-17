@@ -13,6 +13,7 @@ var login = require('./routes/login');
 var grocery = require('./routes/grocery');
 var ingredients = require('./routes/ingredients');
 var inventory = require('./routes/inventory');
+var calories = require('./routes/calories');
 // var grocery = require('./routes/grocery');
 // Example route
 // var user = require('./routes/user');
@@ -53,6 +54,7 @@ app.get('/grocerylist', grocery.groceryList);
 app.get('/addItem', grocery.addItem);
 app.get('/ingredientslist', ingredients.ingredientsList);
 app.get('/inventoryList', inventory.inventoryList);
+app.get('/eatenList', calories.eatenList);
 // Example route
 // app.get('/users', user.list);
 
