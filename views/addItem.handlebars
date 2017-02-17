@@ -15,7 +15,7 @@
 		<h5><a href="/grocery">Back to Grocery List</a></h5>
 
 		<div class="addForm" style="clear: both;">
-			<form id="addGroceryItemForm" role="form" method="get">
+			<form id="addGroceryItemForm" role="form" method="get" action="/addForm">
 					<div class="form-group">
 	      		<label for="name">Name:</label>
 	      		<input type="text" class="form-control" id="name" placeholder="Name" name="name">
@@ -26,7 +26,7 @@
 						<input type="text" class="form-control" id="units" placeholder="Units" name="units">
 	    		</div>
 	    		<input type="submit" id="submit" class="btn btn-default" value="Add"></input>
-	    		<input type="submit" id="submit" class="btn btn-default" value="Cancel"></input>
+	    		<input type="submit" id="cancel" class="btn btn-default" value="Cancel"></input>
 
 
 			</form>
@@ -36,5 +36,6 @@
 
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/bootstrap.js"></script>
+	<script src="/js/addItem.js"></script>
 </body>
 </html>
