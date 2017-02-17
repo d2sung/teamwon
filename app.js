@@ -49,6 +49,7 @@ app.get('/mealplanning', index.meal);
 app.get('/inventory', index.inv);
 app.get('/items/bananas', index.items);
 app.get('/grocerylist', grocery.groceryList);
+app.get('/addItem', grocery.addItem);
 app.get('/ingredientslist', ingredients.ingredientsList);
 // Example route
 // app.get('/users', user.list);
