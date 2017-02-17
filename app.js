@@ -10,6 +10,8 @@ var handlebars = require('express3-handlebars')
 
 var index = require('./routes/index');
 var login = require('./routes/login');
+var grocery = require('./routes/groceryList');
+var ingredients = require('./routes/ingredientsList');
 // var grocery = require('./routes/grocery');
 // Example route
 // var user = require('./routes/user');
@@ -46,6 +48,8 @@ app.get('/calorietracking', index.calorie);
 app.get('/mealplanning', index.meal);
 app.get('/inventory', index.inv);
 app.get('/items/bananas', index.items);
+app.get('/grocerylist', grocery.groceryList);
+app.get('/ingredientslist', ingredients.ingredientsList);
 // Example route
 // app.get('/users', user.list);
 
