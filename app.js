@@ -12,6 +12,7 @@ var index = require('./routes/index');
 var login = require('./routes/login');
 var grocery = require('./routes/grocery');
 var ingredients = require('./routes/ingredients');
+var inventory = require('./routes/inventory');
 // var grocery = require('./routes/grocery');
 // Example route
 // var user = require('./routes/user');
@@ -50,6 +51,7 @@ app.get('/inventory', index.inv);
 app.get('/items/bananas', index.items);
 app.get('/grocerylist', grocery.groceryList);
 app.get('/ingredientslist', ingredients.ingredientsList);
+app.get('/inventoryList', inventory.inventoryList);
 // Example route
 // app.get('/users', user.list);
 
