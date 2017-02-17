@@ -1,0 +1,14 @@
+{
+  "inventory": [
+    {
+      "name": "Pears",
+      "quantity": "3",
+      "units": "unit"
+    },
+    {
+      "name": "Potato Chips",
+      "quantity": "2",
+      "units": "bags"
+    }
+  ]
+}
