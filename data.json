@@ -3,6 +3,7 @@
 		{
 			"name": "Easy Mac",
 			"description": "Excellent and delicious pasta made from the chefs at Kraft",
+			"imageURL": "http://girlandthekitchen.com/wp-content/uploads/2016/11/One-Pot-Creamy-Mac-and-Cheese-6-of-8.jpg",
 			"rating": "5",
 			"easiness": "1",
 			"ingredients": {

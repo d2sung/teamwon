@@ -2,11 +2,13 @@
   "groceries": [
     {
       "name": "Bananas",
-      "quantity": "5"
+      "quantity": "5",
+      "units": "unit"
     },
     {
       "name": "Apples",
-      "quantity":"50"
+      "quantity": "50",
+      "units": "unit"
     }
   ]
 }
