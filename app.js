@@ -15,6 +15,7 @@ var ingredients = require('./routes/ingredients');
 var inventory = require('./routes/inventory');
 var calories = require('./routes/calories');
 var add = require('./routes/addItem');
+var meal = require('./routes/meal');
 // var grocery = require('./routes/grocery');
 // Example route
 // var user = require('./routes/user');
@@ -57,6 +58,7 @@ app.get('/ingredientslist', ingredients.ingredientsList);
 app.get('/inventoryList', inventory.inventoryList);
 app.get('/eatenList', calories.eatenList);
 app.get('/addForm', add.addItem);
+app.get('/meal', meal.view);
 // Example route
 // app.get('/users', user.list);
 

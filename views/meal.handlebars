@@ -1,18 +1,42 @@
 <html>
 <head>
-	<title>Meal Planning</title>
+	<title>Recipes</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"
 		charset="utf-8">
 
 	<link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.css" rel="stylesheet">
+	<link href="../css/allpages.css" rel="stylesheet">
 
 </head>
 <body>
+
+<nav class="navbar navbar-default">
+  		<div class="container-fluid">
+    		<div class="navbar-header">
+      			<a class="navbar-brand" href="../grocery">
+        			<img alt="Brand" src= "http://i.imgur.com/jCyrAuq.png">
+        		</a>
+
+        		<a class="navbar-brand" href="../inventory">
+      				<img alt="Brand" src= "http://i.imgur.com/syZdxMQ.png">
+      			</a>
+
+      			<a class= "navbar-brand" href="../mealplanning">
+        			<img alt="Brand" src= "http://i.imgur.com/nddBSj3.png">
+        		</a>
+
+        		<a class="navbar-brand" href="../calorietracking">
+        			<img alt="Brand" src= "http://i.imgur.com/eSySeun.png">
+        		</a>
+			</div>
+  		</div>
+	</nav>
+	
 	<div class="container">
-		<h1>Meal Planning</h1>
-		<!-- Headers -->
-		<h5><a href="/index">Go Home</a></h5>
+		<h3>Meal Planning</h3>
+	
+
 
 		<div class="row">
 			<div class="col-xs-12 col-md-12" id = "meal">
@@ -33,7 +57,22 @@
 			<br>
 			<br>
 
+			{{#each recipes}}
+			<div class="col-xs-6 col-md-4" id = "meal">
+  				<div class = "thumbnail">
+  						<div class = "mealImage">
+		  					<img src ={{imageURL}} alt="Responsive image">
+		  				</div>
+		  				<h3> {{name}}</h3>
+  				</div>
+  			</div>
+  			{{/each}}
+  		</div>
 
+
+
+<!--
+			
   			<div class="col-xs-6 col-md-4" id = "meal">
   				<div class = "thumbnail">
   						<div class = "mealImage">
@@ -62,10 +101,8 @@
  				</div>
 			</div>
 
-		</div>
-
-
-
+		</div> 
+-->
 
 	</div>
 

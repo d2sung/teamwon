@@ -29,6 +29,14 @@
   display: none;
 }
 
+.navbar-header {
+    float: left;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+}
+.navbar-brand {float:none;}
+
 
 input.plus { width:25px; height:25px;}
 input.minus { width:25px; height:25px;}

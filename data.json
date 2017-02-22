@@ -28,8 +28,10 @@
 					"Add butter, milk and cheese",
 					"Enjoy"
 				]
-			},
-
+			}
+		},
+		
+		{
 			"name": "Whopper",
 			"description": "Have it your way...foreal",
 			"imageURL": "http://www.seriouseats.com/images/2015/07/20150728-homemade-whopper-food-lab-00.jpg",
