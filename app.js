@@ -58,7 +58,7 @@ app.get('/ingredientslist', ingredients.ingredientsList);
 app.get('/inventoryList', inventory.inventoryList);
 app.get('/eatenList', calories.eatenList);
 app.get('/addForm', add.addItem);
-app.get('/meal', meal.view);
+app.get('/recipesList', meal.recipesList);
 // Example route
 // app.get('/users', user.list);
 

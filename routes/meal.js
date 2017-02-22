@@ -1,6 +1,5 @@
 var data = require('../data.json');
 
-exports.view = function(req, res) {
-	console.log(data);
-	res.render('meal', data);
+exports.recipesList = function(req, res) {
+	res.json(data);
 };

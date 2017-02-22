@@ -5,7 +5,6 @@ $(document).ready(function() {
 })
 
 function initializePage() {
-  console.log("Getting eatenList");
   $.get("/eatenList", getEatenList);
 
   // ADD click listener here
