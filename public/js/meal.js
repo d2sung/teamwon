@@ -15,7 +15,7 @@ function getRecipesList(result) {
   $.each( result['recipes'], function (index, value) {
     var htmlToInject = '<div class="col-xs-6 col-md-4" id ="' + index + 
     '"> <div class = "thumbnail"> <div class = "mealImage"> <img src = "' + value.imageURL +
-    '" class="img-responsive center-block" alt="Responsive image"> </div> <h3>' + value.name + '</h3> </div> </div>';
+    '" class="img-responsive center-block" alt="Responsive image"> </div> <h5>' + value.name + '</h5> </div> </div>';
 
      $('#recipesList').append(htmlToInject);
    });

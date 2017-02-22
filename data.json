@@ -60,6 +60,130 @@
 					"Enjoy"
 				]
 			}
+		},
+
+		{
+			"name": "Footlong",
+			"description": "Eat hella fresh",
+			"imageURL": "http://mayakitchenette.com/wp-content/uploads/2015/05/Homemade-Subway-Sandwich-7.jpg",
+			"rating": "4",
+			"easiness": "2",
+			"ingredients": {
+				"name": [
+					"Buns",
+					"patty",
+					"lettuce",
+					"tomato"
+				],
+				"quantity": [
+					"2",
+					"1-2",
+					"2",
+					"1 slice"
+				]
+			},
+			"instructions": {
+				"step": [
+					"Bring water to a boil in a medium pot",
+					"Put kraft macaroni in for 10 minutes or until tender",
+					"Drain macaroni but do not rinse, return to pot",
+					"Add butter, milk and cheese",
+					"Enjoy"
+				]
+			}
+		},
+
+		{
+			"name": "Rice",
+			"description": "Simple, delicious, doge",
+			"imageURL": "http://www.howtoboil.net/wp-content/uploads/2012/05/boil-rice.jpg",
+			"rating": "4",
+			"easiness": "2",
+			"ingredients": {
+				"name": [
+					"Buns",
+					"patty",
+					"lettuce",
+					"tomato"
+				],
+				"quantity": [
+					"2",
+					"1-2",
+					"2",
+					"1 slice"
+				]
+			},
+			"instructions": {
+				"step": [
+					"Bring water to a boil in a medium pot",
+					"Put kraft macaroni in for 10 minutes or until tender",
+					"Drain macaroni but do not rinse, return to pot",
+					"Add butter, milk and cheese",
+					"Enjoy"
+				]
+			}
+		},
+		
+		{
+			"name": "Steak and Eggs",
+			"description": "Simple, delicious, doge",
+			"imageURL": "https://media-cdn.tripadvisor.com/media/photo-s/02/4d/32/3c/steak-and-eggs.jpg",
+			"rating": "4",
+			"easiness": "2",
+			"ingredients": {
+				"name": [
+					"Buns",
+					"patty",
+					"lettuce",
+					"tomato"
+				],
+				"quantity": [
+					"2",
+					"1-2",
+					"2",
+					"1 slice"
+				]
+			},
+			"instructions": {
+				"step": [
+					"Bring water to a boil in a medium pot",
+					"Put kraft macaroni in for 10 minutes or until tender",
+					"Drain macaroni but do not rinse, return to pot",
+					"Add butter, milk and cheese",
+					"Enjoy"
+				]
+			}
+		},
+
+		{
+			"name": "Top Ramen",
+			"description": "Simple, delicious, doge",
+			"imageURL": "http://images1.westword.com/imager/the-top-five-reasons-why-ramen-noodles-are/u/original/6459808/ramenn.jpg",
+			"rating": "4",
+			"easiness": "2",
+			"ingredients": {
+				"name": [
+					"Buns",
+					"patty",
+					"lettuce",
+					"tomato"
+				],
+				"quantity": [
+					"2",
+					"1-2",
+					"2",
+					"1 slice"
+				]
+			},
+			"instructions": {
+				"step": [
+					"Bring water to a boil in a medium pot",
+					"Put kraft macaroni in for 10 minutes or until tender",
+					"Drain macaroni but do not rinse, return to pot",
+					"Add butter, milk and cheese",
+					"Enjoy"
+				]
+			}
 		}
 	]
 }
