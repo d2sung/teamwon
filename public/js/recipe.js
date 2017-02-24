@@ -1,11 +1,13 @@
+var ingredientsList_local = [];
+
 $(document).ready(function() {
 	initializePage();
 })
 
 function initializePage() {
   console.log("Recipe page called initializePage");
+  $.get("/ingredientslist", getIngredientsList);
   $.get("/recipeInstructions", getRecipe);
-
 }
 
 
@@ -17,8 +19,13 @@ function getRecipe(result) {
 
   $.each( result['recipes'], function (index, value) {
     var tempName = value.name.replace(/ /g, '');
-    if( tempName == name ) {
-      console.log("found a match");
+
+		for (var j = 0; j < ingredientsList_local.length; j++){
+			console.log("local ingredients list");
+			console.log(ingredientsList_local[j].name);
+		}
+		//match the url param to a recipe in the JSON
+		if( tempName == name ) {
       //adding name and image to html
       var htmlToInject = '<div id ="' + index +
       '"> <h3> ' + value.name + ' </h3> <div class = "thumbnail"> <div class = "mealImage"> <img src = "' + value.imageURL +
@@ -27,8 +34,21 @@ function getRecipe(result) {
       htmlToInject += '<b>Ingredients</b>';
       htmlToInject += '<p>';
       for (var i = 0; i < value.ingredients.name.length ; i++ ){
+				var haveIngredient = 0;
+				console.log(value.ingredients.name[i]);
+				for (var j = 0; j < ingredientsList_local.length; j++) {
+					console.log(ingredientsList_local[j].name);
+					if(ingredientsList_local[j].name.toUpperCase() == value.ingredients.name[i].toUpperCase() ) {
+						console.log("Found a match in ingredient list");
+						htmlToInject += '<span style="color:#00FF00">';
+						haveIngredient = 1;
+					}
+				}
         htmlToInject += value.ingredients.quantity[i]  +' ' +  value.ingredients.name[i] + '<br>';
-      }
+				if( haveIngredient ){
+					htmlToInject += '</span>';
+				}
+			}
       htmlToInject += '</p>' + '<b>Directions</b> <p>';
 
       for (var i = 0; i < value.instructions.step.length; i++ ){
@@ -44,6 +64,15 @@ function getRecipe(result) {
        $('#recipeBody').append(htmlToInject);
    }
    });
+}
+
+function getIngredientsList(result) {
+  console.log(result);
+  $.each( result['ingredients'], function (index, value) {
+		ingredientsList_local.push({name: value.name, quantity: value.quantity
+    });
+  });
+  console.log(ingredientsList_local);
 }
 
 function GetQueryStringParams(sParam)

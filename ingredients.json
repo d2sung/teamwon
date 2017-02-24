@@ -7,6 +7,22 @@
     {
       "name": "Ice Cream Bars",
       "quantity":"18"
+    },
+    {
+      "name": "Milk",
+      "quantity":"1"
+    },
+    {
+      "name": "Butter",
+      "quantity":"2"
+    },
+    {
+      "name": "Lettuce",
+      "quantity":"5"
+    },
+    {
+      "name": "Rice",
+      "quantity":"5"
     }
   ]
 }
