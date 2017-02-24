@@ -6,7 +6,7 @@
 var express = require('express');
 var http = require('http');
 var path = require('path');
-var handlebars = require('express3-handlebars')
+var handlebars = require('express3-handlebars');
 
 var index = require('./routes/index');
 var login = require('./routes/login');
@@ -62,6 +62,7 @@ app.get('/eatenList', calories.eatenList);
 app.get('/addForm', add.addItem);
 app.get('/recipesList', meal.recipesList);
 app.get('/recipeInstructions', meal.recipeInstructions);
+app.get('/recipe2', index.recipe2);
 // Example route
 // app.get('/users', user.list);
 
