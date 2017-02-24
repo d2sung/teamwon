@@ -24,7 +24,7 @@ function details() {
 				      '"> <h3> ' + result.title + ' </h3> <div class = "thumbnail"> <div class = "mealImage"> <img src = "' + result.image +
 				      '" class="img-responsive center-block" alt="Responsive image"> </div> </div> ';
 				      //add ingredients to html
-				      htmlToInject += '<b>Ingredients</b></div> Hey Tay :)';
+				      htmlToInject += '<b>Ingredients</b></div>';
 							$('#recipeBody').append(htmlToInject);
 							}
 	      });
