@@ -16,6 +16,7 @@ var inventory = require('./routes/inventory');
 var calories = require('./routes/calories');
 var add = require('./routes/addItem');
 var meal = require('./routes/meal');
+
 // var grocery = require('./routes/grocery');
 // Example route
 // var user = require('./routes/user');
@@ -52,6 +53,7 @@ app.get('/calorietracking', index.calorie);
 app.get('/mealplanning', index.meal);
 app.get('/inventory', index.inv);
 app.get('/items/bananas', index.items);
+app.get('/recipe', index.recipe);
 app.get('/grocerylist', grocery.groceryList);
 app.get('/addItem', grocery.addItem);
 app.get('/ingredientslist', ingredients.ingredientsList);
@@ -59,6 +61,7 @@ app.get('/inventoryList', inventory.inventoryList);
 app.get('/eatenList', calories.eatenList);
 app.get('/addForm', add.addItem);
 app.get('/recipesList', meal.recipesList);
+app.get('/recipeInstructions', meal.recipeInstructions);
 // Example route
 // app.get('/users', user.list);
 

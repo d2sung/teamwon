@@ -30,3 +30,7 @@ exports.items = function(req, res) {
 exports.items = function(req, res) {
 	res.render('login');
 }
+
+exports.recipe = function(req, res) {
+  res.render('recipe');
+}
