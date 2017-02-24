@@ -30,7 +30,7 @@
 				]
 			}
 		},
-		
+
 		{
 			"name": "Whopper",
 			"description": "Have it your way...foreal",
@@ -53,11 +53,9 @@
 			},
 			"instructions": {
 				"step": [
-					"Bring water to a boil in a medium pot",
-					"Put kraft macaroni in for 10 minutes or until tender",
-					"Drain macaroni but do not rinse, return to pot",
-					"Add butter, milk and cheese",
-					"Enjoy"
+					"Cook the whopper",
+					"Put it in the bun with the lettuce and tomato",
+					"Eat dat"
 				]
 			}
 		},
@@ -71,23 +69,21 @@
 			"ingredients": {
 				"name": [
 					"Buns",
-					"patty",
+					"cold cuts",
 					"lettuce",
 					"tomato"
 				],
 				"quantity": [
 					"2",
-					"1-2",
+					"1/4 pound",
 					"2",
 					"1 slice"
 				]
 			},
 			"instructions": {
 				"step": [
-					"Bring water to a boil in a medium pot",
-					"Put kraft macaroni in for 10 minutes or until tender",
-					"Drain macaroni but do not rinse, return to pot",
-					"Add butter, milk and cheese",
+					"Put the lettuce and tomato in a bun",
+					"Put the cold cuts in the bun",
 					"Enjoy"
 				]
 			}
@@ -101,29 +97,24 @@
 			"easiness": "2",
 			"ingredients": {
 				"name": [
-					"Buns",
-					"patty",
-					"lettuce",
-					"tomato"
+					"rice",
+					"water"
 				],
 				"quantity": [
-					"2",
-					"1-2",
-					"2",
-					"1 slice"
+					"2 cups",
+					"2 1/4 cups"
 				]
 			},
 			"instructions": {
 				"step": [
+					"Soak rice in water for 20 minutes",
 					"Bring water to a boil in a medium pot",
-					"Put kraft macaroni in for 10 minutes or until tender",
-					"Drain macaroni but do not rinse, return to pot",
-					"Add butter, milk and cheese",
-					"Enjoy"
+					"Add rice and simmer for 15-20 minutes",
+					"Nice Rice"
 				]
 			}
 		},
-		
+
 		{
 			"name": "Steak and Eggs",
 			"description": "Simple, delicious, doge",
@@ -132,24 +123,24 @@
 			"easiness": "2",
 			"ingredients": {
 				"name": [
-					"Buns",
-					"patty",
-					"lettuce",
-					"tomato"
+					"Steak",
+					"Eggs",
+					"Vegetable Oil"
 				],
 				"quantity": [
-					"2",
-					"1-2",
-					"2",
-					"1 slice"
+					"1",
+					"2-3",
+					"1 tbsp"
 				]
 			},
 			"instructions": {
 				"step": [
-					"Bring water to a boil in a medium pot",
-					"Put kraft macaroni in for 10 minutes or until tender",
-					"Drain macaroni but do not rinse, return to pot",
-					"Add butter, milk and cheese",
+					"Season the steak with salt and pepper",
+					"Heat oil in a skillet on high heat",
+					"Grill steak for 5 minutes a side",
+					"Lightly grease a separate pan and heat on medium",
+					"Crack eggs into pan and cover until the eggs reach your preferred doneness",
+					"Remove steak from heat and let rest for 2-3 minutes",
 					"Enjoy"
 				]
 			}
@@ -163,24 +154,19 @@
 			"easiness": "2",
 			"ingredients": {
 				"name": [
-					"Buns",
-					"patty",
-					"lettuce",
-					"tomato"
+					"Top Ramen Noodles",
+					"Top Ramen Flavor Pack"
 				],
 				"quantity": [
-					"2",
-					"1-2",
-					"2",
-					"1 slice"
+					"1 Bag",
+					"1"
 				]
 			},
 			"instructions": {
 				"step": [
 					"Bring water to a boil in a medium pot",
-					"Put kraft macaroni in for 10 minutes or until tender",
-					"Drain macaroni but do not rinse, return to pot",
-					"Add butter, milk and cheese",
+					"Add ramen and boil for 5 minutes",
+					"Add flavor pack",
 					"Enjoy"
 				]
 			}

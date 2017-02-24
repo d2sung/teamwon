@@ -20,11 +20,22 @@ function getRecipe(result) {
     if( tempName == name ) {
       console.log("found a match");
       //adding name and image to html
-      var htmlToInject = '<div class="col-xs-6 col-md-4" id ="' + index +
+      var htmlToInject = '<div id ="' + index +
       '"> <h3> ' + value.name + ' </h3> <div class = "thumbnail"> <div class = "mealImage"> <img src = "' + value.imageURL +
       '" class="img-responsive center-block" alt="Responsive image"> </div> </div> ';
       //add ingredients to html
-      htmlToInject += '<b>Ingredients</b></div>';
+      htmlToInject += '<b>Ingredients</b>';
+      htmlToInject += '<p>';
+      for (var i = 0; i < value.ingredients.name.length ; i++ ){
+        htmlToInject += value.ingredients.quantity[i]  +' ' +  value.ingredients.name[i] + '<br>';
+      }
+      htmlToInject += '</p>' + '<b>Directions</b> <p>';
+
+      for (var i = 0; i < value.instructions.step.length; i++ ){
+        htmlToInject += i+1 + ': ' + value.instructions.step[i] + '<br>';
+      }
+
+      htmlToInject += '</p></div>';
 
       // for(var k in value.ingredients.name) {
       //
