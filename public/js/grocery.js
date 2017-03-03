@@ -21,12 +21,14 @@ function initializePage() {
 function getGroceryList(result) {
   console.log(result);
   $.each( result['groceries'], function (index, value) {
-    var htmlToInject = '<div class="checkbox" id="' + index + '"> <label>' +
-    '<input type="checkbox" name="check" value="">' + 'Name: ' + value.name + ' Quantity: ' + value.quantity
-    + '</label></div>';
-		groceryList_local.push({name: value.name, quantity: value.quantity, units: value.units, toDelete: false});
-		console.log(groceryList_local);
-    $('#groceryList').append(htmlToInject);
+		if(value) {
+	    var htmlToInject = '<div class="checkbox" id="' + value.name + '"> <label>' +
+	    '<input type="checkbox" name="check" value="">' + 'Name: ' + value.name + ' Quantity: ' + value.quantity
+	    + '</label></div>';
+			groceryList_local.push({name: value.name, quantity: value.quantity, units: value.units, toDelete: false});
+			console.log(groceryList_local);
+	    $('#groceryList').append(htmlToInject);
+		}
   });
 	$('.checkbox').click(showMoveButton);
 }
@@ -34,41 +36,23 @@ function getGroceryList(result) {
 function moveGroceryItems() {
 
 	var checked = document.getElementsByName('check');
-	$.get("/inventoryList", function (data) {
-		console.log("successfully got json data");
-		console.log(data);
 		for (var i = 0; i < checked.length; i++) {
 			if (checked[i].checked) {
-				data.inventory.push({
-					name: groceryList_local[i].name,
-					quantity: groceryList_local[i].quantity,
-					units: groceryList_local[i].units
-				});
-				groceryList_local[i].toDelete = true;
-			}
+				$('#'+groceryList_local[i].name).remove();
+				var url = "/grocery/" + groceryList_local[i].name;
+				console.log(url);
+				$.get(url, initializePage);
+				}
 			else {
 				groceryList_local[i].toDelete = false;
 				console.log ("not checked");
 			}
 		}
-		$.get("/groceryList", function (result) {
-			var offset = 0;
-			console.log(result);
-			var length = groceryList_local.length;
-			console.log("length is: " +  length);
-			for (var j = 0; j < length; j++) {
-				if(groceryList_local[j].toDelete) {
-					delete result.groceries[j];
-					$("div[id*=" + j + "]").remove();
-					offset++;
-				}
+}
 
-			}
-		});
+function moveCallback() {
 
-		console.log(data);
-	});
-  console.log("Hehe");
+
 }
 
 function showMoveButton(e) {

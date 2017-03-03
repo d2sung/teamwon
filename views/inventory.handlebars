@@ -38,25 +38,7 @@
 		<h3>Inventory</h3>
 
 			<ul class="list-group">
-			{{#each ingredients}}
-				<li class="list-group-item">
-					 	{{name}}
-
-
-					 	<div class = "pull-right">  
-					 		<a class = "dec" id = {{name}}> <i class="glyphicon glyphicon-minus-sign "></i> </a>
-								{{quantity}}{{units}}
-					 			
-
-
-					 		<a class = "inc" id = {{name}}>  <i class="glyphicon glyphicon-plus-sign"></i> </a>
-						</div>
-
-				</li>
-
-
-
-			{{/each}}
+				<div id="inventoryList"></div>
 			</ul>
 			
 		

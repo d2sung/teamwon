@@ -56,10 +56,9 @@ app.get('/addForm', add.addItem);
 //Grocery
 app.get('/grocerylist', grocery.groceryList);
 app.get('/addItem', grocery.addItem);
-
-//Meal/Recipes
 app.get('/recipesList', meal.recipesList);
 app.get('/recipeInstructions', meal.recipeInstructions);
+app.get('/grocery/:name', grocery.itemInfo);
 app.get('/recipe2', index.recipe2);
 
 //Calories
@@ -70,11 +69,9 @@ app.get('/ingredientslist', ingredients.ingredientsList);
 
 
 //Inventory
-//app.get('/decrement/:item', inventory.decrement);
-//app.get('/increment/:item', inventory.increment);
-
-app.get('/decrement', inventory.decrement);
-app.get('/increment', inventory.increment);
+app.get('/decrement/:item', inventory.decrement);
+app.get('/increment/:item', inventory.increment);
+app.get('/inventoryList', inventory.inventoryList);
 
 
 // Example route

@@ -8,53 +8,56 @@ $(document).ready(function() {
 
 
 function initializePage() {
-	console.log("Javascript connected!");
-	$('.dec').click(decrement)
+	$(".list-group-item").remove();
+	$.get("/inventoryList", getInventoryList)
+		
+}
+
+function getInventoryList(result) {
+	console.log(result);
+	
+	$.each(result['ingredients'], function(index, value){
+		if (value) {
+			var htmlToInject = '<li class="list-group-item">' +
+					 	value.name + '<div class = "pull-right"> <a class = "dec" id ='
+						+ value.name + '> <i class="glyphicon glyphicon-minus-sign "> </i> </a>' +
+						value.quantity + value.units 
+						+ '<a class = "inc" id =' + value.name + '> <i class="glyphicon glyphicon-plus-sign"></i> </a> </div> </li>'
+		
+		$('#inventoryList').append(htmlToInject);
+		}
+	});
+
 	$('.inc').click(increment)
+	$('.dec').click(decrement)
+	
 }
 
 function decrement(){
     console.log("decremented");
-
-    item = this.id;
-    //var url = "/decrement/" + item;
-
-    $.ajax({
-		url: "/decrement" + item,
-    	type: "GET",
-    })
-
-    success: function (result){
-    	console.log("result is " + result);
-    	result 
-    }
-    
-    $.get('/decrement', decCallBack);
+	item = this.id;
+	var url = "/decrement/" + item;
+    $.get(url, initializePage);
 
 }
 
 function increment(){
     console.log("incremented");
     item = this.id;
-    //var url = "/increment/" + item
-    $.get('/increment', incCallBack);
+   	var url = "/increment/" + item;
+    $.get(url, initializePage);
 
 }
 
-function decCallBack(result){
+/*function decCallBack(result){
+	console.log("decCallback");
 	console.log(result);
-
-	console.log("item: " + item);
-
-
-
-	$('#').html(name);
+	$.get('/inventory');
 }
 
 function incCallBack(result){
+	console.log("incCallback");
 	console.log(result);
-	console.log("item: " + item);
-
-
-}
+	$.get('/inventory');
+}*/
 
