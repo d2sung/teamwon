@@ -1,4 +1,3 @@
-
 /*
  * GET home page.
  */
@@ -33,4 +32,8 @@ exports.items = function(req, res) {
 
 exports.recipe = function(req, res) {
   res.render('recipe');
+}
+
+exports.recipe2 = function(req, res) {
+  res.render('recipe2');
 }
