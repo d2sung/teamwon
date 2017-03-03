@@ -4,6 +4,7 @@ var groceryList_local = [];
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
+	$("#success-alert").hide();
 })
 
 /*
@@ -18,8 +19,16 @@ function initializePage() {
 
 }
 
+function showAlert() {
+	$("#success-alert").alert();
+	$("#success-alert").fadeTo(2000, 500).slideUp(500, function(){
+		$("#success-alert").slideUp(500);
+		});
+	}
+
 function getGroceryList(result) {
   console.log(result);
+	console.log(groceryList_local);
   $.each( result['groceries'], function (index, value) {
 		if(value) {
 	    var htmlToInject = '<div class="checkbox" id="' + value.name + '"> <label>' +
@@ -31,6 +40,7 @@ function getGroceryList(result) {
 		}
   });
 	$('.checkbox').click(showMoveButton);
+
 }
 
 function moveGroceryItems() {
@@ -39,9 +49,12 @@ function moveGroceryItems() {
 		for (var i = 0; i < checked.length; i++) {
 			if (checked[i].checked) {
 				$('#'+groceryList_local[i].name).remove();
+				console.log("Local grocery list");
+				console.log(groceryList_local);
 				var url = "/grocery/" + groceryList_local[i].name;
 				console.log(url);
 				$.get(url, initializePage);
+				groceryList_local.splice(i, 1);
 				}
 			else {
 				groceryList_local[i].toDelete = false;
