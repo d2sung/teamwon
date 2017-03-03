@@ -44,25 +44,39 @@ if ('development' == app.get('env')) {
 }
 
 // Add routes here
-//app.get('/login', index.);
-//app.get('/', index.view);
 app.get('/', login.view);
 app.get('/index', index.view)
 app.get('/grocery', index.grocery);
 app.get('/calorietracking', index.calorie);
 app.get('/mealplanning', index.meal);
-app.get('/inventory', index.inv);
-app.get('/items/bananas', index.items);
+app.get('/inventory', inventory.view);
 app.get('/recipe', index.recipe);
+app.get('/addForm', add.addItem);
+
+//Grocery
 app.get('/grocerylist', grocery.groceryList);
 app.get('/addItem', grocery.addItem);
-app.get('/ingredientslist', ingredients.ingredientsList);
-app.get('/inventoryList', inventory.inventoryList);
-app.get('/eatenList', calories.eatenList);
-app.get('/addForm', add.addItem);
+
+//Meal/Recipes
 app.get('/recipesList', meal.recipesList);
 app.get('/recipeInstructions', meal.recipeInstructions);
 app.get('/recipe2', index.recipe2);
+
+//Calories
+app.get('/eatenList', calories.eatenList);
+
+
+app.get('/ingredientslist', ingredients.ingredientsList);
+
+
+//Inventory
+//app.get('/decrement/:item', inventory.decrement);
+//app.get('/increment/:item', inventory.increment);
+
+app.get('/decrement', inventory.decrement);
+app.get('/increment', inventory.increment);
+
+
 // Example route
 // app.get('/users', user.list);
 

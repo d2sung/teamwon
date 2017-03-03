@@ -9,75 +9,69 @@
 	<link href="../css/allpages.css" rel="stylesheet">
 
 </head>
+
 <body>
+	<!--Nav Bar -->
+	<nav class="navbar navbar-default">
+	  		<div class="container-fluid">
+	    		<div class="navbar-header">
+	      			<a class="navbar-brand" href="../grocery">
+	        			<img alt="Brand" src= "http://i.imgur.com/jCyrAuq.png">
+	        		</a>
 
-<nav class="navbar navbar-default">
-  		<div class="container-fluid">
-    		<div class="navbar-header">
-      			<a class="navbar-brand" href="../grocery">
-        			<img alt="Brand" src= "http://i.imgur.com/jCyrAuq.png">
-        		</a>
+	        		<a class="navbar-brand" href="../inventory">
+	      				<img alt="Brand" src= "http://i.imgur.com/syZdxMQ.png">
+	      			</a>
 
-        		<a class="navbar-brand" href="../inventory">
-      				<img alt="Brand" src= "http://i.imgur.com/syZdxMQ.png">
-      			</a>
+	      			<a class="navbar-brand" href="../mealplanning">
+	        			<img alt="Brand" src= "http://i.imgur.com/nddBSj3.png">
+	        		</a>
 
-      			<a class="navbar-brand" href="../mealplanning">
-        			<img alt="Brand" src= "http://i.imgur.com/nddBSj3.png">
-        		</a>
-
-        		<a class="navbar-brand" href="../calorietracking">
-        			<img alt="Brand" src= "http://i.imgur.com/eSySeun.png">
-        		</a>
-			</div>
-  		</div>
-	</nav>
+	        		<a class="navbar-brand" href="../calorietracking">
+	        			<img alt="Brand" src= "http://i.imgur.com/eSySeun.png">
+	        		</a>
+				</div>
+	  		</div>
+		</nav>
 	
 	<div class="container">
 		<h3>Inventory</h3>
 
-		<div id="ingredientsList"></div></br>
+			<ul class="list-group">
+			{{#each ingredients}}
+				<li class="list-group-item">
+					 	{{name}}
 
-		<!-- <ul>
-			<li><a href="items/bananas"> Bananas </a>
-				<form id='incdec' method='POST' action='#'>
-    			<input type='button' value='-' class='minus' field='quantity' />
-    			<input type='text' name='quantity' value='0' class='qty' />
-    			<input type='button' value='+' class='plus' field='quantity' />
-				</form>
-			</li></br>
-			<li> Milk
-				<form id='incdec' method='POST' action='#'>
-					<input type='button' value='-' class='minus' field='quantity' />
-					<input type='text' name='quantity' value='0' class='qty' />
-					<input type='button' value='+' class='plus' field='quantity' />
-				</form>
-			</li></br>
-			<li> Eggs
-				<form id='incdec' method='POST' action='#'>
-					<input type='button' value='-' class='minus' field='quantity' />
-					<input type='text' name='quantity' value='0' class='qty' />
-					<input type='button' value='+' class='plus' field='quantity' />
-				</form>
-			</li>
-		</ul></br> -->
 
+					 	<div class = "pull-right">  
+					 		<a class = "dec" id = {{name}}> <i class="glyphicon glyphicon-minus-sign "></i> </a>
+								{{quantity}}{{units}}
+					 			
+
+
+					 		<a class = "inc" id = {{name}}>  <i class="glyphicon glyphicon-plus-sign"></i> </a>
+						</div>
+
+				</li>
+
+
+
+			{{/each}}
+			</ul>
+			
+		
+
+
+
+
+		<!-- Button -->
 		<div>
 			<button> Add an item </button>
-			<button> Modify an Item </button>
-		</div>
-	</br>
-
-		<div id="footer">
-			<p><a href="../grocery"> Grocery List </a>
-				<a href="../inventory"> Inventory </a>
-				<a href="../mealplanning"> Meal Planning </a>
-				<a href="../calorietracking"> Calorie Tracker </a></p>
 		</div>
 	</div>
 
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/bootstrap.js"></script>
-	<script src="/js/ingredientsList.js"></script>
+	<script src="/js/inventory.js"></script>
 </body>
 </html>
