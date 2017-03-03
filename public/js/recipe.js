@@ -40,14 +40,14 @@ function getRecipe(result) {
 					console.log(ingredientsList_local[j].name);
 					if(ingredientsList_local[j].name.toUpperCase() == value.ingredients.name[i].toUpperCase() ) {
 						console.log("Found a match in ingredient list");
-						htmlToInject += '<span style="color:#00FF00">';
+						htmlToInject += '<span style="color:#00FF00"> &#10004 </span>';
 						haveIngredient = 1;
 					}
 				}
-        htmlToInject += value.ingredients.quantity[i]  +' ' +  value.ingredients.name[i] + '<br>';
-				if( haveIngredient ){
-					htmlToInject += '</span>';
+				if(!haveIngredient ){
+					htmlToInject += '<span style="color:#F20000"> &#10008 </span>';
 				}
+        htmlToInject += value.ingredients.quantity[i]  +' ' +  value.ingredients.name[i] + '<br>';
 			}
       htmlToInject += '</p>' + '<b>Directions</b> <p>';
 
