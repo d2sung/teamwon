@@ -58,7 +58,7 @@ app.get('/grocerylist', grocery.groceryList);
 app.get('/addItem', grocery.addItem);
 app.get('/recipesList', meal.recipesList);
 app.get('/recipeInstructions', meal.recipeInstructions);
-app.get('/grocery/:name', grocery.itemInfo);
+app.post('/move', grocery.move);
 app.get('/recipe2', index.recipe2);
 
 //Calories
