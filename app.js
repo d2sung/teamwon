@@ -63,7 +63,7 @@ app.get('/addForm', add.addItem);
 app.get('addInventoryItem', add.addInventoryItem);
 app.get('/recipesList', meal.recipesList);
 app.get('/recipeInstructions', meal.recipeInstructions);
-app.get('/grocery/:name', grocery.itemInfo);
+app.post('/move', grocery.move);
 app.get('/recipe2', index.recipe2);
 // Example route
 // app.get('/users', user.list);

@@ -15,28 +15,44 @@ exports.removeGroceryItem = function(req, res) {
 	//refresh page
 }
 
-exports.itemInfo = function(req, res)
+exports.move = function(req, res)
 {
 
-	console.log("Reached itemInfo route");
-	console.log(req.params);
-	console.log(groceries.groceries);
-	console.log(typeof "groceries");
-	var item;
+	console.log("Reached move route");
 
-	for (var key in groceries.groceries) {
-		console.log("Checking against an item");
-		console.log(groceries.groceries[key].name);
-		console.log("Parameter name");
-		console.log(req.params.name);
-			if(groceries.groceries[key].name.toUpperCase() == req.params.name.toUpperCase()){
+	var data = JSON.parse(JSON.stringify(req.body));
 
-				console.log("found a match");
-				item = groceries.groceries[key];
-				delete groceries.groceries[key];
-				ingredients.ingredients.push(item);
 
-			}
-    }
 
+	var i = 0;
+	var item
+	while(data[i]) {
+		console.log(data[i]);
+		for(var key in groceries.groceries) {
+			if(groceries.groceries[key].name.toUpperCase() == data[i].toUpperCase()){
+					console.log("found a match");
+					item = groceries.groceries[key];
+					delete groceries.groceries[key];
+					ingredients.ingredients.push(item);
+
+					}
+		}
+		i++;
+	}
 }
+	//res.json(req.body.data);
+
+	// for (var key in groceries.groceries) {
+	// 	console.log("Checking against an item");
+	// 	console.log(groceries.groceries[key].name);
+	// 	console.log("Parameter name");
+	// 	console.log(req.params.name);
+	// 		if(groceries.groceries[key].name.toUpperCase() == req.params.name.toUpperCase()){
+	//
+	// 			console.log("found a match");
+	//
+	// 			delete groceries.groceries[key];
+	// 			ingredients.ingredients.push(item);
+	//
+	// 		}
+  //   }
