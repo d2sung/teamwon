@@ -16,6 +16,8 @@ var inventory = require('./routes/inventory');
 var calories = require('./routes/calories');
 var add = require('./routes/addItem');
 var meal = require('./routes/meal');
+var user = require('./routes/user');
+var mealB = require('./routes/mealB');
 
 // var grocery = require('./routes/grocery');
 // Example route
@@ -47,10 +49,11 @@ if ('development' == app.get('env')) {
 //app.get('/login', index.);
 //app.get('/', index.view);
 app.get('/', login.view);
-app.get('/index', index.view)
+app.get('/index', index.view);
 app.get('/grocery', index.grocery);
 app.get('/calorietracking', index.calorie);
 app.get('/mealplanning', index.meal);
+app.get('/mealB', mealB.view);
 app.get('/inventory', index.inv);
 app.get('/items/bananas', index.items);
 app.get('/recipe', index.recipe);
@@ -65,6 +68,10 @@ app.get('/recipesList', meal.recipesList);
 app.get('/recipeInstructions', meal.recipeInstructions);
 app.get('/grocery/:name', grocery.itemInfo);
 app.get('/recipe2', index.recipe2);
+app.get('/info', index.info);
+app.get('/userData', mealB.getUserData);
+// app.get('/updateUser/:user', user.update);
+app.post('/updateUser', user.update);
 // Example route
 // app.get('/users', user.list);
 

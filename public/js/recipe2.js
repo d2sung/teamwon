@@ -19,7 +19,7 @@ function details() {
 				 			'Accept': 'application/json'
 						},
 						success: function (result){
-							console.log(result);
+							console.log("result is: " + result);
 							var htmlToInject = '<div class="col-xs-6 col-md-4" id ="' + 327 +
 				      '"> <h3> ' + result.title + ' </h3> <div class = "thumbnail"> <div class = "mealImage"> <img src = "' + result.image +
 				      '" class="img-responsive center-block" alt="Responsive image"> </div> </div> ';

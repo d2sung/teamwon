@@ -37,3 +37,7 @@ exports.recipe = function(req, res) {
 exports.recipe2 = function(req, res) {
   res.render('recipe2');
 }
+
+exports.info = function(req, res) {
+  res.render('info');
+}

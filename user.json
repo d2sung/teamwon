@@ -1,0 +1,12 @@
+{
+  "users": [
+    {
+      "name": "DEFAULT",
+      "password": "DEFAULT",
+      "intolerances": {
+        "gluten": "true",
+        "dairy": "true"
+      }
+    }
+  ]
+}
