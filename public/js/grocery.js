@@ -77,7 +77,7 @@ function moveGroceryItems() {
 				console.log ("not checked");
 			}
 		}
-
+		showAlert();
 		console.log("current data: " + JSON.stringify(data));
 		//$.post('/move', data);
 		$.ajax({
