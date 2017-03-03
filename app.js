@@ -46,32 +46,39 @@ if ('development' == app.get('env')) {
 }
 
 // Add routes here
-//app.get('/login', index.);
-//app.get('/', index.view);
 app.get('/', login.view);
 app.get('/index', index.view);
 app.get('/grocery', index.grocery);
 app.get('/calorietracking', index.calorie);
 app.get('/mealplanning', index.meal);
 app.get('/mealB', mealB.view);
-app.get('/inventory', index.inv);
 app.get('/items/bananas', index.items);
+app.get('/inventory', inventory.view);
 app.get('/recipe', index.recipe);
+app.get('/addForm', add.addItem);
+
+//Grocery
 app.get('/grocerylist', grocery.groceryList);
 app.get('/addItem', grocery.addItem);
-app.get('/ingredientslist', ingredients.ingredientsList);
-app.get('/inventoryList', inventory.inventoryList);
-app.get('/eatenList', calories.eatenList);
-app.get('/addForm', add.addItem);
-app.get('addInventoryItem', add.addInventoryItem);
 app.get('/recipesList', meal.recipesList);
 app.get('/recipeInstructions', meal.recipeInstructions);
-app.get('/grocery/:name', grocery.itemInfo);
+app.post('/move', grocery.move);
 app.get('/recipe2', index.recipe2);
 app.get('/info', index.info);
 app.get('/userData', mealB.getUserData);
-// app.get('/updateUser/:user', user.update);
 app.post('/updateUser', user.update);
+
+//Calories
+app.get('/eatenList', calories.eatenList);
+
+
+app.get('/ingredientslist', ingredients.ingredientsList);
+
+
+//Inventory
+app.get('/decrement/:item', inventory.decrement);
+app.get('/increment/:item', inventory.increment);
+app.get('/inventoryList', inventory.inventoryList);
 // Example route
 // app.get('/users', user.list);
 

@@ -1,28 +1,39 @@
 {
   "ingredients": [
     {
-      "name": "Eggs",
-      "quantity": "12"
+      "name": "eggs",
+      "quantity": "12",
+      "units": ""
     },
     {
-      "name": "Ice Cream Bars",
-      "quantity":"18"
+      "name": "grapes",
+      "quantity":"18",
+      "units": ""
+
     },
     {
-      "name": "Milk",
-      "quantity":"1"
+      "name": "milk",
+      "quantity":"1",
+      "units": "gl"
+
     },
     {
-      "name": "Butter",
-      "quantity":"2"
+      "name": "butter",
+      "quantity":"2",
+      "units": ""
+
     },
     {
-      "name": "Lettuce",
-      "quantity":"5"
+      "name": "lettuce",
+      "quantity":"5",
+      "units": ""
+
     },
     {
-      "name": "Rice",
-      "quantity":"5"
+      "name": "rice",
+      "quantity":"5",
+      "units": "c"
+
     }
   ]
 }

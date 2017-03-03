@@ -6,6 +6,16 @@
       "units": "unit"
     },
     {
+      "name": "Waffles",
+      "quantity": "5",
+      "units": "unit"
+    },
+    {
+      "name": "Ducks",
+      "quantity": "5",
+      "units": "unit"
+    },
+    {
       "name": "Apples",
       "quantity": "50",
       "units": "unit"
