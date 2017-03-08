@@ -8,6 +8,7 @@ function initializePage() {
   $.get("/recipesList", getRecipesList);
 
 	$('#randomButton').click(random);
+	$('#randomButton').click(gaSend)
 }
 
 
@@ -43,4 +44,8 @@ function random() {
 							}
 	      });
 	// $.get("/recipe?name=" + randomRecipe.recipes[0].title);
+}
+
+function gaSend(){
+	ga('send', 'event', 'recipe' ,'click');
 }

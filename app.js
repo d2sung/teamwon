@@ -52,6 +52,7 @@ app.get('/grocery', index.grocery);
 app.get('/calorietracking', index.calorie);
 app.get('/mealplanning', index.meal);
 app.get('/mealB', mealB.view);
+//app.get('/mealB', index.mealB);
 app.get('/items/bananas', index.items);
 app.get('/inventory', inventory.view);
 app.get('/recipe', index.recipe);
