@@ -8,6 +8,7 @@ function initializePage() {
   $.get("/userData", getUserData);
 	$.get()
 	$('#randomButton').click(random);
+	$('#randomButton').click(randomButtonSend);
 }
 
 
@@ -85,4 +86,9 @@ function random() {
 							xhr.setRequestHeader("Access-Control-Allow-Origin", "*"); // Enter here your Mashape key
     				}
 				});
+}
+
+
+function randomButtonSend(){
+	ga('send', 'event', 'anotherRecipeButton', 'click');	
 }
