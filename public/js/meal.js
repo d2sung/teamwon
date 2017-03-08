@@ -47,5 +47,5 @@ function random() {
 }
 
 function gaSend(){
-	ga('send', 'event', 'recipefucker' ,'click');
+	ga('send', 'event', 'randomRecipeButton' ,'click');
 }
