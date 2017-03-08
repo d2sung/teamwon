@@ -8,8 +8,8 @@ function initializePage() {
   $.get("/recipesList", getRecipesList);
 
 	$('#randomButton').click(random);
-	$('#randomButton').click(gaSend);
-	$('.thumbnail').click(recipesThumbnailSend);
+	$('#randomButton').click(randomButtonSend);
+	$('.recipeThumbnail').click(recipesThumbnailSend);
 }
 
 
@@ -18,7 +18,7 @@ function getRecipesList(result) {
   $.each( result['recipes'], function (index, value) {
 		var temp = value.name.replace(/ /g, '');
     var htmlToInject = ' <a href="/recipe?name=' +
-			temp + '"> <div class="col-xs-6 col-md-4" id ="' + index +
+			temp + '" class="recipeThumbnail"> <div class="col-xs-6 col-md-4" id ="' + index +
     '"> <div class = "thumbnail"> <div class = "mealImage"> <img src = "' + value.imageURL +
     '" class="img-responsive center-block" alt="Responsive image"> </div>'  + value.name + '  </div> </div> </a>';
 
