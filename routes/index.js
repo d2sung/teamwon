@@ -22,6 +22,10 @@ exports.meal = function(req, res) {
   res.render('meal');
 };
 
+/*exports.mealB = function (req, res){
+  res.render('mealB');
+}*/
+
 exports.items = function(req, res) {
   res.render('bananas');
 }
