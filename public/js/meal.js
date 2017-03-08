@@ -9,7 +9,7 @@ function initializePage() {
 
 	$('#randomButton').click(random);
 	$('#randomButton').click(randomButtonSend);
-	$('#recipeThumbnail').click(recipesThumbnailSend);
+	$('#recipesList').click(recipesThumbnailSend);
 }
 
 
