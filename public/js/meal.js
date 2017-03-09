@@ -8,8 +8,8 @@ function initializePage() {
   $.get("/recipesList", getRecipesList);
 
 	$('#randomButton').click(random);
-	$('#randomButton').click(randomButtonSend);
-	$('#recipesList').click(recipesThumbnailSend);
+	$('#randomButton').click(newRecipeSend);
+	$('#recipesList').click(newRecipeSend);
 }
 
 
@@ -47,10 +47,14 @@ function random() {
 	// $.get("/recipe?name=" + randomRecipe.recipes[0].title);
 }
 
-function randomButtonSend(){
+/*function randomButtonSend(){
 	ga('send', 'event', 'randomRecipeButton' ,'click');
 }
 
 function recipesThumbnailSend() {
 	ga('send', 'event', 'recipeThumbnail', 'click');
+}*/
+
+function newRecipeSend(){
+	ga('send', 'event', 'newRecipe', 'click');
 }
