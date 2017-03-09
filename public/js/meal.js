@@ -8,7 +8,8 @@ function initializePage() {
   $.get("/recipesList", getRecipesList);
 
 	$('#randomButton').click(random);
-	$('#randomButton').click(gaSend)
+	$('#randomButton').click(newRecipeSend);
+	$('#recipesList').click(newRecipeSend);
 }
 
 
@@ -16,10 +17,10 @@ function getRecipesList(result) {
   console.log(result);
   $.each( result['recipes'], function (index, value) {
 		var temp = value.name.replace(/ /g, '');
-    var htmlToInject = '<div class="col-xs-6 col-md-4" id ="' + index +
+    var htmlToInject = ' <a href="/recipe?name=' +
+			temp + '" id="recipeThumbnail"> <div class="col-xs-6 col-md-4" id ="' + index +
     '"> <div class = "thumbnail"> <div class = "mealImage"> <img src = "' + value.imageURL +
-    '" class="img-responsive center-block" alt="Responsive image"> </div> <a href="/recipe?name=' +
-			temp + '"> ' + value.name + ' </a> </div> </div>';
+    '" class="img-responsive center-block" alt="Responsive image"> </div>'  + value.name + '  </div> </div> </a>';
 
      $('#recipesList').append(htmlToInject);
    });
@@ -46,6 +47,13 @@ function random() {
 	// $.get("/recipe?name=" + randomRecipe.recipes[0].title);
 }
 
-function gaSend(){
-	ga('send', 'event', 'recipe' ,'click');
+/*function randomButtonSend(){
+	ga('send', 'event', 'randomRecipeButton' ,'click');
+}
+function recipesThumbnailSend() {
+	ga('send', 'event', 'recipeThumbnail', 'click');
+}*/
+
+function newRecipeSend(){
+	ga('send', 'event', 'newRecipe', 'click');
 }
