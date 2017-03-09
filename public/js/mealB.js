@@ -8,7 +8,7 @@ function initializePage() {
   $.get("/userData", getUserData);
 	$.get()
 	$('#randomButton').click(random);
-	$('#randomButton').click(randomButtonSend);
+	$('#randomButton').click(newRecipeSend);
 }
 
 
@@ -89,6 +89,6 @@ function random() {
 }
 
 
-function randomButtonSend(){
-	ga('send', 'event', 'anotherRecipeButton', 'click');	
+function newRecipeSend(){
+	ga('send', 'event', 'newRecipe', 'click');	
 }
