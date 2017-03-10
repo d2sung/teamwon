@@ -27,6 +27,13 @@ function showAlert() {
 		});
 	}
 
+	function showDeleteAlert() {
+		$("#delete-alert").alert();
+		$("#delete-alert").fadeTo(2000, 500).slideUp(500, function(){
+			$("#delete-alert").slideUp(500);
+			});
+	}
+
 function getGroceryList(result) {
   console.log(result);
 	groceryList_local = [];
@@ -41,6 +48,7 @@ function getGroceryList(result) {
 		}
   });
 	$('.checkbox').click(showMoveButton);
+	$('.checkbox').click(showRemoveButton);
 
 }
 
@@ -90,6 +98,44 @@ function moveGroceryItems() {
 
 }
 
+function deleteGroceryItems() {
+
+
+	var data = {};
+	var checked = document.getElementsByName('check');
+
+	// console.log("checked.length = " +checked.length);
+	var length = checked.length;
+	var count = 0;
+		for (var i = 0; (i+count) < length  ; i++) {
+			console.log("i + count = " + (i+count));
+			// if( (i+count) >= length) {
+			// 	break;
+			// }
+			console.log("Checking against " + groceryList_local[i+count].name);
+			if (checked[i].checked) {
+					data[count]= groceryList_local[i+count].name;
+					$('#'+groceryList_local[i+count].name).remove();
+					console.log("pushing " + groceryList_local[i+count].name + " to data");
+					console.log("current data: " + JSON.stringify(data));
+
+
+					count++;
+					i--;
+
+					console.log("count = " + count);
+					console.log("length = " + length);
+					console.log("count+i = " + (count+i)) ;
+					console.log("length = " + length);
+			}
+			else {
+				console.log ("not checked");
+			}
+		}
+		showDeleteAlert();
+
+}
+
 function showMoveButton(e) {
 
   // TODO: This next part not working properly (to hide button if nothing selected)
@@ -112,8 +158,8 @@ function showMoveButton(e) {
 
 }
 
-function colorItem() {
-	//document.getElementsByClassName("list-group-item").background-color = "#720E07";
-	console.log("item pressed");
 
+
+function showRemoveButton(e) {
+	document.getElementById("deleteFromList").style.display="block";
 }
