@@ -39,6 +39,7 @@
 
 		<div id="groceryList"></div>
 		<div id="buttons">
+			<input display="none" type="button" id="deleteFromList" onClick="deleteGroceryItems();" value="Remove Items From List">
 			<input display="none" type="button" id="moveToInventory" onClick="moveGroceryItems();" value="Move Items To Inventory">
 		</div></br>
 
@@ -51,6 +52,11 @@
     <button type="button" class="close" data-dismiss="alert">x</button>
     <strong>Success! </strong>
     Item(s) moved to inventory
+		</div>
+
+		<div class="alert alert-success" id="delete-alert">
+    <button type="button" class="close" data-dismiss="alert">x</button>
+    Item(s) successfully <strong> deleted </strong> from grocery list
 		</div>
 
   <script src="https://code.jquery.com/jquery.js"></script>

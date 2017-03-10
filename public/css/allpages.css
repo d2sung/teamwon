@@ -29,6 +29,18 @@
   display: none;
 }
 
+#deleteFromList {
+  display: none;
+}
+
+#success-alert {
+  display: none;
+}
+
+#delete-alert {
+  display: none;
+}
+
 .navbar-header {
     float: left;
     padding: 15px;
