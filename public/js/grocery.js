@@ -15,7 +15,7 @@ function initializePage() {
   $.get("/grocerylist", getGroceryList);
 
   $('#check').click(function(){
-  	console.log("fuck");
+  	console.log("duck");
   });
 
 }
@@ -35,6 +35,7 @@ function showAlert() {
 	}
 
 function getGroceryList(result) {
+	$("#groceryList").empty();
   console.log(result);
 	groceryList_local = [];
   $.each( result['groceries'], function (index, value) {
@@ -96,6 +97,14 @@ function moveGroceryItems() {
 			 contentType: "application/json"
 	 });
 
+	   $.get("/grocerylist", getGroceryList);
+	//  for (var i = 0; i < length  ; i++) {
+	// 	 	if (checked[i].checked) {
+	// 			groceries.splice(i, 1);
+	// 			length--;
+	// 			i--;
+	// 		}
+	//  }
 }
 
 function deleteGroceryItems() {
