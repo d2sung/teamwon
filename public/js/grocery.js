@@ -40,7 +40,7 @@ function getGroceryList(result) {
   $.each( result['groceries'], function (index, value) {
 		if(value) {
 	    var htmlToInject = '<li class="list-group-item"> <div class="checkbox" id="' + value.name + '"> <label>' +
-	    '<input type="checkbox" class="check" value=""> <div class = "groceryItem">' + value.name + ' (' + value.quantity
+	    '<input type="checkbox" name = "check" class="check" value=""> <div class = "groceryItem">' + value.name + ' (' + value.quantity
 	    + ') </div></label></div></li>';
 			groceryList_local.push({name: value.name, quantity: value.quantity, units: value.units, toDelete: false});
 			console.log(groceryList_local);
