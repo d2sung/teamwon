@@ -14,8 +14,9 @@ function initializePage() {
 
   $.get("/grocerylist", getGroceryList);
 
-  // ADD click listener here
-  // DELETE click listener here
+  $('#check').click(function(){
+  	console.log("fuck");
+  });
 
 }
 
@@ -31,9 +32,9 @@ function getGroceryList(result) {
 	groceryList_local = [];
   $.each( result['groceries'], function (index, value) {
 		if(value) {
-	    var htmlToInject = '<div class="checkbox" id="' + value.name + '"> <label>' +
-	    '<input type="checkbox" name="check" value="">' + 'Name: ' + value.name + ' Quantity: ' + value.quantity
-	    + '</label></div>';
+	    var htmlToInject = '<li class="list-group-item"> <div class="checkbox" id="' + value.name + '"> <label>' +
+	    '<input type="checkbox" class="check" value=""> <div class = "groceryItem">' + value.name + ' (' + value.quantity
+	    + ') </div></label></div></li>';
 			groceryList_local.push({name: value.name, quantity: value.quantity, units: value.units, toDelete: false});
 			console.log(groceryList_local);
 	    $('#groceryList').append(htmlToInject);
@@ -108,5 +109,11 @@ function showMoveButton(e) {
 		document.getElementById("moveToInventory").style.display="block";
 	} */
 	document.getElementById("moveToInventory").style.display="block";
+
+}
+
+function colorItem() {
+	//document.getElementsByClassName("list-group-item").background-color = "#720E07";
+	console.log("item pressed");
 
 }
