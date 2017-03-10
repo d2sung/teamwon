@@ -18,6 +18,7 @@ var add = require('./routes/addItem');
 var meal = require('./routes/meal');
 var user = require('./routes/user');
 var mealB = require('./routes/mealB');
+var mealC = require('./routes/mealC');
 
 // var grocery = require('./routes/grocery');
 // Example route
@@ -52,6 +53,7 @@ app.get('/grocery', index.grocery);
 app.get('/calorietracking', index.calorie);
 app.get('/mealplanning', index.meal);
 app.get('/mealB', mealB.view);
+app.get('/mealC', mealC.view);
 //app.get('/mealB', index.mealB);
 app.get('/items/bananas', index.items);
 app.get('/inventory', inventory.view);

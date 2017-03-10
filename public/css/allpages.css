@@ -14,7 +14,7 @@ body {
 /*Grocery List*/
 
 .check{
-   width: 25px; 
+   width: 25px;
    height: 25px;
 }
 
@@ -79,6 +79,10 @@ body {
 }
 
 #delete-alert {
+  display: none;
+}
+
+#nextRecipe {
   display: none;
 }
 

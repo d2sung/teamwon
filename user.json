@@ -1,12 +1,22 @@
 {
   "users": [
     {
-      "name": "DEFAULT",
+      "name": "Jane Smith",
       "password": "DEFAULT",
       "intolerances": {
-        "gluten": "true",
-        "dairy": "true"
-      }
+        "gluten": "false",
+        "dairy": "false",
+        "peanut": "false",
+        "egg": "false",
+        "sesame": "false",
+        "seafood": "false",
+        "shellfish": "false",
+        "soy": "false",
+        "sulfite": "false",
+        "tree_nut": "false"
+      },
+      "diet": "none",
+      "dislikes": "none"
     }
   ]
 }
