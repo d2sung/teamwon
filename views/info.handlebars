@@ -15,17 +15,17 @@
 	<div class="container">
 		<h3>Welcome!</h3>
 
-		<h5> We noticed you've logged in for the first time. Please let us know a couple things about you so we can help you better!</h5>
-
-		<h5> Are you gluten free? </h5>
-		<div>
-			<input id="gluten" type="checkbox" data-toggle="toggle" data-on="Yes" data-off="No" data-size="small">
-		</div>
-
-		<h5> Are you dairy free? </h5>
-		<div>
-			<input id="dairy" type="checkbox" data-toggle="toggle" data-on="Yes" data-off="No" data-size="small">
-		</div></br>
+		<h5> We noticed you've logged in for the first time. Please let us know a couple things about you so we can help you better! If any fields don't apply to you, you can simply leave them blank. You can also change these at any time in the user settings.</h5>
+		</br>
+		<form id="userForm">
+			<h5> Do you have any intolerances? Some common intolerances are to gluten, dairy, and tree nuts. You can list several intolerances by putting a comma inbetween them. </h5>
+			<input id="intolerances" type="text" placeholder="i.e. peanuts, shellfish...">
+			<h5> Are you vegetarian, vegan, or on any other specific diet? </h5>
+			<input id="diet" type="text" placeholder="i.e. vegan, vegetarian...">
+			<h5> Are there are any other ingredients you don't want or like in your food? You can list these with a comma in between like above.</h5>
+			<input id="dislikes" type="text" placeholder="i.e. garlic, onions...">
+		</form>
+		</br>
 		<div class="wrapper">
 			<a href="../grocery"><button id="continue" type="button" class="btn btn-success">Continue</button></a>
 		</div>
