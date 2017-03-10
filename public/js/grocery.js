@@ -14,8 +14,9 @@ function initializePage() {
 
   $.get("/grocerylist", getGroceryList);
 
-  // ADD click listener here
-  // DELETE click listener here
+  $('#check').click(function(){
+  	console.log("duck");
+  });
 
 }
 
@@ -34,13 +35,14 @@ function showAlert() {
 	}
 
 function getGroceryList(result) {
+	$("#groceryList").empty();
   console.log(result);
 	groceryList_local = [];
   $.each( result['groceries'], function (index, value) {
 		if(value) {
-	    var htmlToInject = '<div class="checkbox" id="' + value.name + '"> <label>' +
-	    '<input type="checkbox" name="check" value="">' + 'Name: ' + value.name + ' Quantity: ' + value.quantity
-	    + '</label></div>';
+	    var htmlToInject = '<li class="list-group-item"> <div class="checkbox" id="' + value.name + '"> <label>' +
+	    '<input type="checkbox" name = "check" class="check" value=""> <div class = "groceryItem">' + value.name + ' (' + value.quantity
+	    + ') </div></label></div></li>';
 			groceryList_local.push({name: value.name, quantity: value.quantity, units: value.units, toDelete: false});
 			console.log(groceryList_local);
 	    $('#groceryList').append(htmlToInject);
@@ -95,6 +97,14 @@ function moveGroceryItems() {
 			 contentType: "application/json"
 	 });
 
+	   $.get("/grocerylist", getGroceryList);
+	//  for (var i = 0; i < length  ; i++) {
+	// 	 	if (checked[i].checked) {
+	// 			groceries.splice(i, 1);
+	// 			length--;
+	// 			i--;
+	// 		}
+	//  }
 }
 
 function deleteGroceryItems() {
@@ -156,6 +166,8 @@ function showMoveButton(e) {
 	document.getElementById("moveToInventory").style.display="block";
 
 }
+
+
 
 function showRemoveButton(e) {
 	document.getElementById("deleteFromList").style.display="block";

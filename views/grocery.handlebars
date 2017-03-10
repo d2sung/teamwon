@@ -10,23 +10,19 @@
 
 </head>
 <body>
-	<nav class="navbar navbar-default">
+	<nav class="navbar navbar-default navbar-fixed-top">
   		<div class="container-fluid">
     		<div class="navbar-header">
       			<a class="navbar-brand" href="../grocery">
-        			<img alt="Brand" src= "http://i.imgur.com/jCyrAuq.png">
+        			<img alt="Brand" src= "http://i.imgur.com/aJoJubM.png">
         		</a>
 
         		<a class="navbar-brand" href="../inventory">
-      				<img alt="Brand" src= "http://i.imgur.com/syZdxMQ.png">
+      				<img alt="Brand" src= "http://i.imgur.com/vq0fdZ0.png">
       			</a>
 
       			<a class="navbar-brand" href="../mealplanning">
-        			<img alt="Brand" src= "http://i.imgur.com/nddBSj3.png">
-        		</a>
-
-        		<a class="navbar-brand" href="../calorietracking">
-        			<img alt="Brand" src= "http://i.imgur.com/eSySeun.png">
+        			<img alt="Brand" src= "http://i.imgur.com/mTdmiOg.png">
         		</a>
 			</div>
   		</div>
@@ -35,9 +31,13 @@
 
 
 	<div class="container">
-		<h3>Grocery List</h3>
-
-		<div id="groceryList"></div>
+		<div class="row">
+		 	<div class="col-xs-9 col-md-8"><h4>Grocery List</h4></div>
+		 	<div class="col-xs-3 col-md-4"><a href="addItem" class="btn btn-success" role="button">+</a></div>
+		</div>
+		<ul class="list-group">
+			<div id="groceryList"></div>
+		</ul>
 		<div id="buttons">
 			<input display="none" type="button" id="deleteFromList" onClick="deleteGroceryItems();" value="Remove Items From List">
 			<input display="none" type="button" id="moveToInventory" onClick="moveGroceryItems();" value="Move Items To Inventory">
@@ -45,8 +45,8 @@
 
 
 
-		<div id="groceryList"></div></br>
-		<a href="addItem" class="btn btn-info" role="button">+</a>
+		<div id="groceryList"></div>
+		
 
 		<div class="alert alert-success" id="success-alert">
     <button type="button" class="close" data-dismiss="alert">x</button>
