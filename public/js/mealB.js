@@ -92,5 +92,5 @@ function random() {
 
 
 function newRecipeSend(){
-	ga('send', 'event', 'newRecipe', 'click');
+  ga('send', 'event', 'newRecipe', 'click');
 }
