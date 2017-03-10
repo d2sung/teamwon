@@ -6,7 +6,7 @@ $(document).ready(function() {
 
 function initializePage() {
   $.get("/userData", getUserData);
-	$.get()
+	// $.get()
 	$('#randomButton').click(random);
 	$('#randomButton').click(newRecipeSend);
 }
@@ -42,7 +42,7 @@ function getUserData(result) {
 	});
 	console.log("fuck");
 	$.ajax({
-					 url: "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/random?limitLicense=false&number=1&tags=gluten_free%2Cdairy_free",
+					 url: "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/searchComplex?addRecipeInformation=false&cuisine=american&excludeIngredients=coconut%2C+mango&fillIngredients=false&includeIngredients=onions%2C+lettuce%2C+tomato&instructionsRequired=false&intolerances=peanut%2C+shellfish&limitLicense=false&maxCalories=1500&maxCarbs=100&maxFat=100&maxProtein=100&minCalories=150&minCarbs=5&minFat=5&minProtein=5&number=10&offset=0&query=burger&ranking=1&type=main+course",
 					 type: "GET",
 					 data: {},
 					 datatype: 'jsonp',
@@ -90,5 +90,5 @@ function random() {
 
 
 function newRecipeSend(){
-	ga('send', 'event', 'newRecipe', 'click');	
+  ga('send', 'event', 'newRecipe', 'click');
 }

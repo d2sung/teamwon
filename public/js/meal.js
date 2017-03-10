@@ -50,7 +50,6 @@ function random() {
 /*function randomButtonSend(){
 	ga('send', 'event', 'randomRecipeButton' ,'click');
 }
-
 function recipesThumbnailSend() {
 	ga('send', 'event', 'recipeThumbnail', 'click');
 }*/

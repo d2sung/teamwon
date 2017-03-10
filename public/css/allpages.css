@@ -1,4 +1,45 @@
 
+/*Styling*/
+body {
+  /*background-color: #720E07;*/
+  padding-top: 70px;
+}
+
+.navbar-default {
+  background-color: #720E07;
+}
+
+
+
+/*Grocery List*/
+
+.check{
+   width: 25px; 
+   height: 25px;
+}
+
+.groceryItem{
+  position: relative;
+  padding-left: 20px;
+  top: 5px;
+}
+
+/*Add Item*/
+.row.no-gutter{
+  margin-left: 1;
+  margin-right: 1;
+}
+
+.row.no-gutter [class*='col-']:not(:first-child),
+.row.no-gutter [class*='col-']:not(:last-child) {
+  padding-right: 1;
+  padding-left: 1;
+}
+
+
+
+
+
 .addForm {
   display: table;
 }
@@ -26,6 +67,18 @@
 }
 
 #moveToInventory {
+  display: none;
+}
+
+#deleteFromList {
+  display: none;
+}
+
+#success-alert {
+  display: none;
+}
+
+#delete-alert {
   display: none;
 }
 
