@@ -39,8 +39,15 @@
 			<div id="groceryList"></div>
 		</ul>
 		<div id="buttons">
-			<input display="none" type="button" id="deleteFromList" onClick="deleteGroceryItems();" value="Remove Items From List">
-			<input display="none" type="button" id="moveToInventory" onClick="moveGroceryItems();" value="Move Items To Inventory">
+			<div class = "row">
+		
+			<div class = "col-xs-6 col-md-6">
+				<input display="none" type="button" class = "btn btn-danger btn-lg" id="deleteFromList" onClick="deleteGroceryItems();" value="Remove">
+			</div>
+			<div class = "col-xs-6 col-md-6">
+				<input display="none" type="button" class = "btn btn-warning btn-lg" id="moveToInventory" onClick="moveGroceryItems();" value="Move to Inventory">
+			</div>
+		</div>
 		</div></br>
 
 
