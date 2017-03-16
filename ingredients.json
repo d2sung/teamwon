@@ -1,36 +1,36 @@
 {
   "ingredients": [
     {
-      "name": "eggs",
+      "name": "Eggs",
       "quantity": "12",
       "units": ""
     },
     {
-      "name": "grapes",
+      "name": "Grapes",
       "quantity":"18",
       "units": ""
 
     },
     {
-      "name": "milk",
+      "name": "Milk",
       "quantity":"1",
       "units": "gl"
 
     },
     {
-      "name": "butter",
+      "name": "Butter",
       "quantity":"2",
       "units": ""
 
     },
     {
-      "name": "lettuce",
+      "name": "Lettuce",
       "quantity":"5",
       "units": ""
 
     },
     {
-      "name": "rice",
+      "name": "Rice",
       "quantity":"5",
       "units": "c"
 
