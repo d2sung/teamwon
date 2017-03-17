@@ -3,7 +3,7 @@ var _name, _gluten, _dairy, _peanut, _egg, _sesame, _seafood, _shellfish, _soy, 
 var _query, _cuisine, _calories, _ingredients, _difficulty;
 var numIterated;
 var mealIds;
-
+var ingredientsList_local = [];
 $(document).ready(function() {
 	initializePage();
 })
@@ -15,9 +15,16 @@ function initializePage() {
 	$('#go').click(getRecipe);
 	$('#startOver').click(refreshPage);
 	$('#nextRecipeButton').click(nextRecipe);
-
+	$.get("ingredientsList", getIngredientsList);
 }
 
+function getIngredientsList(result) {
+	console.log(result);
+	$.each( result['ingredients'], function (index, value) {
+		ingredientsList_local,push({name: value.name, quantity: value.quantity
+					   });
+	});
+}
 
 function getUserName(result) {
   console.log(result);
@@ -192,7 +199,19 @@ function getRecipe() {
 													 var htmlToInject = '<div class="collapse" id="collapse'+ numIterated + '">'
 															+ '<div class="card card-block">';
 													 for (var i = 0; i < data.extendedIngredients.length; i++) {
-														 htmlToInject+='<p>' + data.extendedIngredients[i].originalString + '</p>';
+														 htmlToInject+='<p>';
+														 var haveIngredient = 0;
+														 for( var j = 0; j < ingredientsList_local.length; j++) {
+															if(ingredientsList_local[j].name.toUpperCase == data.extendedIngredients[i].name.toUppeCase(){ 	 
+														 		htmlToInject += '<span style="color:#00FF00"> &#10004 </span>';
+															   	haveIngredient = 1;
+															   }
+									   
+														}
+														if (!haveIngredient){
+															htmlToInject += '<span style="color:#F20000"> &#10004 </span>';	
+														}
+														 htmlToInject += data.extendedIngredients[i].originalString + '</p>';
 													 }
 													 htmlToInject+="</div></div>";
 													 $('#afterContainer').append(htmlToInject);
