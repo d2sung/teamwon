@@ -55,6 +55,7 @@ app.get('/mealplanning', mealC.view);
 app.get('/mealB', mealB.view);
 app.get('/mealC', mealC.view);
 app.get('/make/:id', mealC.make);
+app.get('/congrats/:numPts', mealC.congrats);
 
 //app.get('/mealB', index.mealB);
 app.get('/items/bananas', index.items);

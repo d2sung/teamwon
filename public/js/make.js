@@ -2,6 +2,7 @@ var sumCalories = 0;
 var _name, _gluten, _dairy, _peanut, _egg, _sesame, _seafood, _shellfish, _soy, _sulfite, _tree_nut, _diet, _dislikes;
 var _query, _cuisine, _calories, _ingredients;
 var numIterated;
+var numPoints;
 
 $(document).ready(function() {
 	initializePage();
@@ -50,6 +51,7 @@ function details() {
 							$('#instructions-block').css("display", "block");
 							$('#instructions').append(instructions);
 							$('#imDone').css("display", "block");
+							numPoints = data.spoonacularScore;
 							}
 	      });
   }
@@ -60,5 +62,5 @@ function details() {
 	}
 
 	function goHome() {
-		window.location.href = "/grocery";
+		window.location.href = "/congrats/" + numPoints;
 	}

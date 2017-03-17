@@ -10,3 +10,7 @@ exports.getUserData = function(req, res) {
 exports.make = function(req, res) {
 	res.render('make');
 }
+
+exports.congrats = function(req, res) {
+	res.render('congrats');
+}
