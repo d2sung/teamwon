@@ -202,7 +202,7 @@ function getRecipe() {
 														 htmlToInject+='<p>';
 														 var haveIngredient = 0;
 														 for( var j = 0; j < ingredientsList_local.length; j++) {
-															if(ingredientsList_local[j].name.toUpperCase == data.extendedIngredients[i].name.toUpperCase(){ 	 
+															if(ingredientsList_local[j].name.toUpperCase() == data.extendedIngredients[i].name.toUpperCase(){ 	 
 														 		htmlToInject += '<span style="color:#00FF00"> &#10004 </span>';
 															   	haveIngredient = 1;
 															   }
