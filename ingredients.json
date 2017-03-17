@@ -12,9 +12,9 @@
 
     },
     {
-      "name": "Milk",
+      "name": "Garlic",
       "quantity":"1",
-      "units": "gl"
+      "units": ""
 
     },
     {
@@ -24,13 +24,13 @@
 
     },
     {
-      "name": "Lettuce",
+      "name": "Tortillas",
       "quantity":"5",
       "units": ""
 
     },
     {
-      "name": "Rice",
+      "name": "Tomatoes",
       "quantity":"5",
       "units": "c"
 
