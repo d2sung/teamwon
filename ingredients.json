@@ -31,7 +31,13 @@
     },
     {
       "name": "Olive oil",
-      "quantity":"10",
+      "quantity":"0",
+      "units": ""
+
+    }
+    {
+      "name": "Balsamic Vinegar",
+      "quantity":"0",
       "units": ""
 
     }
