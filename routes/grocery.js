@@ -39,6 +39,7 @@ exports.move = function(req, res)
 		}
 		i++;
 	}
+	//res.render('grocery');
 }
 	//res.json(req.body.data);
 

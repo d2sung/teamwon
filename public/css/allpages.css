@@ -7,7 +7,7 @@ body {
 
 * {
  font-size: 100%;
- font-family: Lato;
+ font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .navbar-default {
@@ -90,8 +90,16 @@ body {
 }
 
 #nextRecipe {
+  align: center;
+  display: none;
+  padding-bottom: 5px;
+}
+
+#soDiv {
+  align: center;
   display: none;
 }
+
 
 .navbar-header {
     float: left;
@@ -112,4 +120,47 @@ input.minus { width:25px; height:25px;}
 
 .wrapper {
   text-align: center;
+}
+
+#afterContainer {
+  display: none;
+  padding-bottom: 5px;
+}
+
+#recipeImg {
+  max-height: 300px;
+}
+
+#infoTable {
+  text-align: center;
+  max-width: 500px;
+}
+
+#paddingTest {
+  padding-bottom: 5px;
+}
+
+#padding123 {
+  padding-top: 5px;
+}
+
+#instructions-block {
+  display: none;
+}
+
+#imDone {
+  display: none;
+  padding: 5px;
+}
+
+#alignMe {
+  align: center;
+}
+
+.list-group {
+    list-style: decimal inside;
+}
+
+.list-group-item {
+    display: list-item;
 }
