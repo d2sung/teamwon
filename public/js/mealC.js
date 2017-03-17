@@ -1,6 +1,6 @@
 var sumCalories = 0;
 var _name, _gluten, _dairy, _peanut, _egg, _sesame, _seafood, _shellfish, _soy, _sulfite, _tree_nut, _diet, _dislikes;
-var _query, _cuisine, _calories, _ingredients;
+var _query, _cuisine, _calories, _ingredients, _difficulty;
 var numIterated;
 var mealIds;
 
@@ -48,6 +48,7 @@ function getRecipe() {
 	_cuisine = document.getElementById("cuisine").value;
 	_calories = document.getElementById("calories").value;
 	_ingredients = document.getElementById("ingredients").value;
+	_difficulty = $('input[name="diff"]:checked').val();
 	$.get("/userData", function (result) {
 		console.log("hehex2");
 		$.each( result['users'], function (index, value) {

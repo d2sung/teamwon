@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Meal C</title>
+	<title>Meal Planning</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"
 		charset="utf-8">
 
@@ -35,15 +35,19 @@
 		</p>
 		<h5><strong> Give us in a word or two what you'd like to eat today, and we'll match you with a recipe. </strong></h5>
 		<input id="query" type="text" placeholder="i.e. burger, sandwich, ...">
-
+	</br></br>
 		<h5> Note: the following questions are all optional. </h5>
+		<h5> How difficult do you want your meal to be to create? If you don't care you can leave it at "normal".</h5>
+		<label class="radio-inline"><input type="radio" name="diff" value="0">Easy</label>
+		<label class="radio-inline"><input checked type="radio" name="diff" value="1">Normal</label>
+		<label class="radio-inline"><input type="radio" name="diff" value="2">Hard</label>
 		<h5> Do you want a specific cuisine today? </h5>
 		<input id="cuisine" type="text" placeholder="i.e. american, indian, ...">
 		<h5> Do you want a calorie limit? If so, put in the number of calories you'd like to keep the meal to.</h5>
 		<input id="calories" type="text" placeholder="i.e. 1200">
 		<h5> Any cravings for specific ingredients? You can put in multiple with commas in between. </h5>
 		<input id="ingredients" type="text" placeholder="i.e. lettuce, pickles, ...">
-		<div class="wrapper">
+		<div class="wrapper" id="padding123">
 			<button id="go" type="button" class="btn btn-success">Go!</button>
 		</div>
 	</div>
