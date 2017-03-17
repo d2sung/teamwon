@@ -6,3 +6,7 @@ exports.view = function(req, res) {
 exports.getUserData = function(req, res) {
 	res.json(userData);
 };
+
+exports.make = function(req, res) {
+	res.render('make');
+}
