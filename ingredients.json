@@ -2,12 +2,12 @@
   "ingredients": [
     {
       "name": "Eggs",
-      "quantity": "12",
+      "quantity": "9",
       "units": ""
     },
     {
-      "name": "Grapes",
-      "quantity":"18",
+      "name": "Potatoes",
+      "quantity":"7",
       "units": ""
 
     },
@@ -30,9 +30,16 @@
 
     },
     {
-      "name": "Tomatoes",
-      "quantity":"5",
-      "units": "c"
+
+      "name": "Olive oil",
+      "quantity":"0",
+      "units": ""
+
+    }
+    {
+      "name": "Balsamic Vinegar",
+      "quantity":"0",
+      "units": ""
 
     }
   ]
