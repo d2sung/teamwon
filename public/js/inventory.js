@@ -20,9 +20,9 @@ function getInventoryList(result) {
 		if (value) {
 			var htmlToInject = '<li class="list-group-item">' +
 					 	value.name + '<div class = "pull-right"> <a class = "dec" id ='
-						+ value.name + '> <i class="glyphicon glyphicon-minus-sign "> </i> </a>' +
+						+ value.name + '> <div class="btn btn-warning btn-sm">-</div> </a>' +
 						value.quantity + value.units 
-						+ '<a class = "inc" id =' + value.name + '> <i class="glyphicon glyphicon-plus-sign"></i> </a> </div> </li>'
+						+"  "+'<a class = "inc" id =' + value.name + '><div class="btn btn-warning btn-sm">+</div> </a> </div> </li>'> </li>'
 		
 		$('#inventoryList').append(htmlToInject);
 		}
