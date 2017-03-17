@@ -2,12 +2,12 @@
   "ingredients": [
     {
       "name": "Eggs",
-      "quantity": "12",
+      "quantity": "9",
       "units": ""
     },
     {
       "name": "Potatoes",
-      "quantity":"18",
+      "quantity":"7",
       "units": ""
 
     },
@@ -31,8 +31,8 @@
     },
     {
       "name": "Tomatoes",
-      "quantity":"5",
-      "units": "c"
+      "quantity":"4",
+      "units": ""
 
     }
   ]
