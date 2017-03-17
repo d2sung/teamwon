@@ -10,6 +10,9 @@ $(document).ready(function() {
 function initializePage() {
 	$(".list-group-item").remove();
 	$.get("/inventoryList", getInventoryList)
+
+	//$('.dec').click(decrement)
+	//$('.inc').click(increment)
 		
 }
 
@@ -22,7 +25,8 @@ function getInventoryList(result) {
 					 	value.name + '<div class = "pull-right"> <a class = "dec" id ='
 						+ value.name + '> <div class="btn btn-warning btn-sm">-</div> </a>' +
 						value.quantity + value.units 
-						+"  "+'<a class = "inc" id =' + value.name + '><div class="btn btn-warning btn-sm">+</div> </a> </div> </li>'> </li>'
+						+"  "+'<a class = "inc" id =' + value.name + '><div class="btn btn-warning btn-sm">+</div> </a> </div> </li>'
+		
 		
 		$('#inventoryList').append(htmlToInject);
 		}
@@ -48,8 +52,36 @@ function increment(){
     $.get(url, initializePage);
 
 }
+/*
+function decrement(){
+    console.log("decremented");
 
-/*function decCallBack(result){
+    item = this.id;
+    //var url = "/decrement/" + item;
+
+    $.ajax({
+		url: "/decrement" + item,
+    	type: "GET",
+    })
+
+    success: function (result){
+    	console.log("result is " + result);
+    	result 
+    }
+    
+    $.get('/decrement', decCallBack);
+
+}
+
+function increment(){
+    console.log("incremented");
+    item = this.id;
+    //var url = "/increment/" + item
+    $.get('/increment', incCallBack);
+
+}
+
+function decCallBack(result){
 	console.log("decCallback");
 	console.log(result);
 	$.get('/inventory');
