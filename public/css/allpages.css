@@ -157,10 +157,10 @@ input.minus { width:25px; height:25px;}
   align: center;
 }
 
-.list-group {
+.listlistlist {
     list-style: decimal inside;
 }
 
-.list-group-item {
+.listlist {
     display: list-item;
 }

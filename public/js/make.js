@@ -40,9 +40,9 @@ function details() {
 							htmlToInject+="</div></div>";
 							console.log(data.analyzedInstructions);
 							var instructions = '<div class="container"><div class="row"><div class="col-xs-12">'
-								+ '<ol class="list-group">';
+								+ '<ol class="list-group listlistlist">';
 							for (var j = 0; j < data.analyzedInstructions[0].steps.length; j++) {
-								instructions+='<li class="list-group-item"> <p>'
+								instructions+='<li class="listlist list-group-item"> <p>'
 									+ data.analyzedInstructions[0].steps[j].step + '</p> </li>';
 							}
 							instructions+='</ol></div></div></div>';
