@@ -16,7 +16,7 @@ function initializePage() {
 function details() {
 	var id = getId();
 
-	var htmlToInject = '<h5>You\'ve earned a total of '+ id + 'points for this recipe!</h5>'
+	var htmlToInject = '<h5>You\'ve earned a total of '+ id + ' points for this recipe!</h5>'
 	$('#main-div').append(htmlToInject);
 	$('#imDone').css("display", "block");
 }
