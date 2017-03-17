@@ -18,7 +18,7 @@ exports.decrement = function(req, res){
 			if (quantity > 0){
 				inventory.ingredients[key].quantity = quantity - 1;
 				res.render('inventory');
-				console.log("decrement mothofucka");
+				console.log("decrement");
 			}
 		}
 	}
@@ -33,7 +33,7 @@ exports.increment = function(req, res){
 			var quantity = parseInt(inventory.ingredients[key].quantity);
 			inventory.ingredients[key].quantity = quantity + 1;
 
-			console.log("increments mothofucka");
+			console.log("increments");
 			res.render('inventory');
 		}
 	}

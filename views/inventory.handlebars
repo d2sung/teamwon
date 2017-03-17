@@ -40,9 +40,51 @@
 
 		<ul class="list-group">
 				<div id="inventoryList"></div>
-			</ul>
-			
+		</ul>
+		
+		{{#each ingredients}}
+		<!--<ul class = "list-group">
+ 			<li class="list-group-item"> 
+ 				{{name}}
+				<div class = "pull-right"> 
+					<a class = "dec" id = {{name}}> 
+						<i class="glyphicon glyphicon-minus-sign "> </i> 
+					</a> 
 
+					{{quantity}} {{units}}
+				
+					<a class = "inc" id ={{name}}> 
+						<i class="glyphicon glyphicon-plus-sign"></i> 
+					</a> 
+				</div> 
+			</li>
+		</ul>
+		{{/each}}-->
+
+		<!--
+		<li class="list-group-item">
+			value.name
+			<div class = "row"> 
+				<div class = "pull-right"> 
+					<div class = "col-xs-5"> </div> 
+					<div class = "col-xs-2"> 
+						<a class = "dec" id = value.name> 
+							<div class="btn btn-warning btn-sm">-</div>
+						</a>
+					</div>
+					
+					<div class = "col-xs-1">
+						value.quantity + value.units
+					</div>
+					
+					<div class = "col-xs-1"> 
+						<a class = "inc" id =value.name> 
+							<div class="btn btn-warning btn-sm">+</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</li>-->
 		
 
 
