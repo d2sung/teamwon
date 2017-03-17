@@ -1,17 +1,17 @@
 {
   "groceries": [
     {
-      "name": "Bananas",
+      "name": "Onions",
+      "quantity": "2",
+      "units": "unit"
+    },
+    {
+      "name": "Lettuce",
       "quantity": "5",
       "units": "unit"
     },
     {
-      "name": "Waffles",
-      "quantity": "5",
-      "units": "unit"
-    },
-    {
-      "name": "Ducks",
+      "name": "Chicken",
       "quantity": "5",
       "units": "unit"
     },
