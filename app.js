@@ -85,8 +85,9 @@ app.get('/ingredientslist', ingredients.ingredientsList);
 app.get('/decrement/:item', inventory.decrement);
 app.get('/increment/:item', inventory.increment);
 app.get('/inventoryList', inventory.inventoryList);
-// Example route
-// app.get('/users', user.list);
+
+/*app.get('/decrement', inventory.decrement);
+app.get('/increment', inventory.increment);*/
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
