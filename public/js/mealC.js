@@ -21,7 +21,7 @@ function initializePage() {
 function getIngredientsList(result) {
 	console.log(result);
 	$.each( result['ingredients'], function (index, value) {
-		ingredientsList_local,push({name: value.name, quantity: value.quantity
+		ingredientsList_local.push({name: value.name, quantity: value.quantity
 					   });
 	});
 }
@@ -202,7 +202,7 @@ function getRecipe() {
 														 htmlToInject+='<p>';
 														 var haveIngredient = 0;
 														 for( var j = 0; j < ingredientsList_local.length; j++) {
-															if(ingredientsList_local[j].name.toUpperCase == data.extendedIngredients[i].name.toUppeCase(){ 	 
+															if(ingredientsList_local[j].name.toUpperCase == data.extendedIngredients[i].name.toUpperCase(){ 	 
 														 		htmlToInject += '<span style="color:#00FF00"> &#10004 </span>';
 															   	haveIngredient = 1;
 															   }
