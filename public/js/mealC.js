@@ -162,7 +162,8 @@ function getRecipe() {
 								 	+ data.results[0].title + '</h5>'
 									+ '<img id="recipeImg" src="'
 									+ data.results[0].image
-									+ '" ></img>' + '</div> <div id="infoTable">'
+									+ '" ></img>' + '</div> <i class="glyphicon glyphicon-thumbs-up"></i>'
+									+ data.results[0].aggregateLikes + ' <div id="infoTable">'
 									+ ' <table class="table table-responsive">'
 									+ ' <thead> <tr> <th>Cuisine</th><th>Time To Make</th>'
 									+ ' <th>Servings</th> </tr> </thead>'
@@ -202,14 +203,14 @@ function getRecipe() {
 														 htmlToInject+='<p>';
 														 var haveIngredient = 0;
 														 for( var j = 0; j < ingredientsList_local.length; j++) {
-															if(ingredientsList_local[j].name.toUpperCase() == data.extendedIngredients[i].name.toUpperCase() ){ 	 
+															if(ingredientsList_local[j].name.toUpperCase() == data.extendedIngredients[i].name.toUpperCase() ){
 														 		htmlToInject += '<span style="color:#00FF00"> &#10004 </span>';
 															   	haveIngredient = 1;
 															   }
-									   
+
 														}
 														if (!haveIngredient){
-															htmlToInject += '<span style="color:#F20000"> &#10008 </span>';	
+															htmlToInject += '<span style="color:#F20000"> &#10008 </span>';
 														}
 														 htmlToInject += data.extendedIngredients[i].originalString + '</p>';
 													 }
