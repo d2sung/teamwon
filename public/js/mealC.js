@@ -173,8 +173,8 @@ function getRecipe() {
 									+ ' <div id="paddingTest' + numIterated + '"> <button align="center" display="none"'
 									+ ' type="button" class="btn btn-primary" data-toggle="collapse"'
 									+ ' data-target="#collapse'+ numIterated + '" aria-expanded="false" aria-controls="collapse">'
-									+ ' Toggle Ingredients </button> <button id="makeButton'+ numIterated + '" align="center" display="none"'
-									+ ' type="button" class="btn btn-success"> Make! </button></div>';
+									+ ' Ingredients </button> <button id="makeButton'+ numIterated + '" align="center" display="none"'
+									+ ' type="button" class="btn btn-success"> Make </button></div>';
 							 	 $('#afterContainer').append(htmlToInject);
 								 $('#nextRecipe').css("display", "block");
 								 $('#makeButton' + numIterated).click(goToMake);
