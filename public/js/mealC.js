@@ -209,7 +209,7 @@ function getRecipe() {
 									   
 														}
 														if (!haveIngredient){
-															htmlToInject += '<span style="color:#F20000"> &#10004 </span>';	
+															htmlToInject += '<span style="color:#F20000"> &#10008 </span>';	
 														}
 														 htmlToInject += data.extendedIngredients[i].originalString + '</p>';
 													 }
