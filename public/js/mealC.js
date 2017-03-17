@@ -1,14 +1,21 @@
 var sumCalories = 0;
 var _name, _gluten, _dairy, _peanut, _egg, _sesame, _seafood, _shellfish, _soy, _sulfite, _tree_nut, _diet, _dislikes;
 var _query, _cuisine, _calories, _ingredients;
+var numIterated;
+var mealIds;
 
 $(document).ready(function() {
 	initializePage();
 })
 
 function initializePage() {
+	mealIds = [];
+	numIterated = 0;
   $.get("/userData", getUserName);
 	$('#go').click(getRecipe);
+	$('#startOver').click(refreshPage);
+	$('#nextRecipeButton').click(nextRecipe);
+
 }
 
 
@@ -123,7 +130,7 @@ function getRecipe() {
 				url+= "&maxCalories=" + _calories;
 			}
 			var newQuery = _query.split(' ').join('+');
-			url+= "&number=1&offset=0&query=" + newQuery + "&ranking=1&type=main+course";
+			url+= "&number=1&offset=" + numIterated + "&query=" + newQuery + "&ranking=1&type=main+course";
       console.log(url);
 			$.ajax({
 							 url: url,
@@ -136,9 +143,64 @@ function getRecipe() {
 							 success: function (data){
 								 console.log("GOT HERE");
 								 console.log(data);
-								 // console.log("result is: " + data.recipes[0]);
-								 var htmlToInject = '<div> <h5>' + data.results[0].title + '</h5>' + '<img src="' + data.results[0].image + '" ></img>' + '</div> ';
-							 	 $('#after').append(htmlToInject);
+								 $('#main-div').css("display", "none");
+								 $('#afterContainer').css("display", "block");
+								 console.log(data.results[0]);
+								 var cuisine = "none";
+								 if (data.results[0].cuisines[0]) {
+									 cuisine = data.results[0].cuisines[0];
+								 }
+								 var htmlToInject = '<div id="scrollTo' + numIterated + '" align="center"> <h5>'
+								 	+ data.results[0].title + '</h5>'
+									+ '<img id="recipeImg" src="'
+									+ data.results[0].image
+									+ '" ></img>' + '</div> <div id="infoTable">'
+									+ ' <table class="table table-responsive">'
+									+ ' <thead> <tr> <th>Cuisine</th><th>Time To Make</th>'
+									+ ' <th>Servings</th> </tr> </thead>'
+									+ ' <tbody> <tr> <td>' + cuisine
+									+ ' </td> <td>' + data.results[0].readyInMinutes
+									+ ' minutes </td> <td>' + data.results[0].servings
+									+ ' </tr> </tbody> </table> </div>'
+									+ ' <div id="paddingTest' + numIterated + '"> <button align="center" display="none"'
+									+ ' type="button" class="btn btn-primary" data-toggle="collapse"'
+									+ ' data-target="#collapse'+ numIterated + '" aria-expanded="false" aria-controls="collapse">'
+									+ ' Toggle Ingredients </button> <button id="makeButton'+ numIterated + '" align="center" display="none"'
+									+ ' type="button" class="btn btn-success"> Make! </button></div>';
+							 	 $('#afterContainer').append(htmlToInject);
+								 $('#nextRecipe').css("display", "block");
+								 $('#makeButton' + numIterated).click(goToMake);
+								 mealIds[numIterated] = data.results[0].id;
+								 var scrollTo = "#scrollTo" + numIterated;
+								 if (numIterated != 0) {
+    				 		   $('html, body').animate({
+        	 				   scrollTop: $(scrollTo).offset().top - 70
+    						   }, 2000);
+								 }
+								 url = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/" + data.results[0].id + "/information?includeNutrition=false"
+								 $.ajax({
+					 							 url: url,
+					 							 type: "GET",
+					 							 data: {},
+					 							 datatype: 'jsonp',
+					 							 headers: {'X-Mashape-Key': 'zhCsyskjhDmshg6pNzY9IE3hgCSHp1EhRlJjsntrI3Wx30m1kI',
+					 						 			'Accept': 'application/json'
+					 								},
+					 							 success: function (data){
+					 								 console.log(data);
+													 var htmlToInject = '<div class="collapse" id="collapse'+ numIterated + '">'
+															+ '<div class="card card-block">';
+													 for (var i = 0; i < data.extendedIngredients.length; i++) {
+														 htmlToInject+='<p>' + data.extendedIngredients[i].originalString + '</p>';
+													 }
+													 htmlToInject+="</div></div>";
+													 $('#afterContainer').append(htmlToInject);
+					 								},
+					 								beforeSend: function(xhr) {
+					 		    					xhr.setRequestHeader("X-Mashape-Authorization", "zhCsyskjhDmshg6pNzY9IE3hgCSHp1EhRlJjsntrI3Wx30m1kI");
+					 									xhr.setRequestHeader("Access-Control-Allow-Origin", "*"); // Enter here your Mashape key
+					 		    				}
+					 						});
 								},
 								beforeSend: function(xhr) {
 		    					xhr.setRequestHeader("X-Mashape-Authorization", "zhCsyskjhDmshg6pNzY9IE3hgCSHp1EhRlJjsntrI3Wx30m1kI");
@@ -149,6 +211,18 @@ function getRecipe() {
 	});
 }
 
-function returnfunc() {
+function refreshPage() {
+	location.reload();
+}
 
+function nextRecipe() {
+	numIterated++;
+	$('#afterContainer').append("</br>");
+	getRecipe();
+}
+
+function goToMake(result) {
+
+	var id = result.target.id;
+	window.location.href = "/make/" + mealIds[id.substring(id.length - 1, id.length)];
 }

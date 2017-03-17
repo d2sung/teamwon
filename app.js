@@ -51,9 +51,11 @@ app.get('/', login.view);
 app.get('/index', index.view);
 app.get('/grocery', index.grocery);
 app.get('/calorietracking', index.calorie);
-app.get('/mealplanning', index.meal);
+app.get('/mealplanning', mealC.view);
 app.get('/mealB', mealB.view);
 app.get('/mealC', mealC.view);
+app.get('/make/:id', mealC.make);
+
 //app.get('/mealB', index.mealB);
 app.get('/items/bananas', index.items);
 app.get('/inventory', inventory.view);
